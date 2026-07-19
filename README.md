@@ -60,26 +60,6 @@ Then visit:
 http://127.0.0.1:8765/Before_Ithaca_Standalone.html
 ```
 
-## Suggested Repository Details
-
-**Repository name**
-
-```text
-before-ithaca-odyssey-story-atlas
-```
-
-**Short description**
-
-```text
-An interactive standalone HTML story atlas for The Odyssey, with timeline cards, character profiles, and mythic relationship maps.
-```
-
-**Topics / tags**
-
-```text
-odyssey, greek-mythology, interactive-story, story-atlas, standalone-html, literature, timeline, character-map, trojan-war, ithaca
-```
-
 ## Project Files
 
 ```text
@@ -89,7 +69,3 @@ odyssey_preview.png             Preview image for README and sharing
 START_HERE_Before_Ithaca.txt    Quick local-use note
 README.md                       Project documentation
 ```
-
-## Credits
-
-Made by **Pasindu Ranasinghe**.
