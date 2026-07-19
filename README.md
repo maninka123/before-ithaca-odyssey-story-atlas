@@ -34,10 +34,10 @@ The project is designed to run from one HTML file, so it can be opened locally, 
 
 ## Live Demo
 
-After uploading this repository to GitHub, enable GitHub Pages and open:
+Open the published GitHub Pages site:
 
 ```text
-https://YOUR-USERNAME.github.io/before-ithaca-odyssey-story-atlas/
+https://maninka123.github.io/before-ithaca-odyssey-story-atlas/
 ```
 
 ## Run Locally
