@@ -1,0 +1,11 @@
+.DS_Store
+.playwright-cli/
+
+# Generated archives and download bundles
+*.zip
+Before_Ithaca_All_Downloads/
+
+# Local server or OS noise
+*.log
+Thumbs.db
+
