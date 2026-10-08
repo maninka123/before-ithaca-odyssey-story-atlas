@@ -72,3 +72,20 @@ test("unavailable chapter art preserves the part image and usable story", async 
   );
   await expect(page.locator(".chapter-blend.ready")).toHaveCount(0);
 });
+
+test("compact atlas keeps large labels from crowding the map", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 844 });
+  await page.goto("/#/atlas");
+  await page.getByRole("button", { name: "Use 2D map", exact: true }).click();
+  const marker = page.getByRole("button", {
+    name: "Select The Cyclops",
+    exact: true,
+  });
+  await expect(marker.locator("strong")).toBeHidden();
+  await expect(marker.locator("span")).toBeVisible();
+  await marker.click();
+  await expect(page.locator(".destination-copy h2")).toHaveText("The Cyclops");
+  await expect(page.locator(".destination-list")).toContainText("The Cyclops");
+});

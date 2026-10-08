@@ -1077,6 +1077,7 @@ img {
 }
 .map-canvas {
   height: 480px;
+  container-type: inline-size;
   position: relative;
   overflow: hidden;
 }
@@ -2809,6 +2810,30 @@ img {
 .flat-marker.compact.active,
 .map-marker.compact.active {
   z-index: 5;
+}
+/* On a compact map, readable chapter numbers replace colliding place labels.
+   The full names remain in accessible buttons and the destination list. */
+@container (max-width: 700px) {
+  .flat-marker > strong,
+  .map-marker > strong,
+  .flat-marker.compact:hover > strong,
+  .flat-marker.compact:focus-visible > strong,
+  .map-marker.compact:hover > strong,
+  .map-marker.compact:focus-visible > strong {
+    display: none;
+  }
+  .flat-marker,
+  .map-marker {
+    min-width: 28px;
+    min-height: 28px;
+    padding: 3px;
+    justify-content: center;
+    z-index: 2;
+  }
+  .flat-marker.active,
+  .map-marker.active {
+    z-index: 5;
+  }
 }
 .hotspots {
   z-index: 4;
