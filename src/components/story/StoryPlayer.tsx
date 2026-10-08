@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -50,6 +50,27 @@ export default function StoryPlayer({
     [finished, setFinished] = useState(false),
     [inspected, setInspected] = useState<string[]>([]);
   const audio = useAudio(`${b.title}. ${b.text}`);
+  const content = useRef<HTMLDivElement>(null);
+  const [moreToRead, setMoreToRead] = useState(false);
+  useEffect(() => {
+    const scroller = content.current!;
+    const update = () =>
+      setMoreToRead(
+        scroller.scrollHeight - scroller.clientHeight - scroller.scrollTop > 2,
+      );
+    const observer = new ResizeObserver(update);
+    observer.observe(scroller);
+    observer.observe(scroller.firstElementChild!);
+    scroller.addEventListener("scroll", update, { passive: true });
+    update();
+    return () => {
+      observer.disconnect();
+      scroller.removeEventListener("scroll", update);
+    };
+  }, []);
+  useEffect(() => {
+    content.current?.scrollTo({ top: 0, behavior: "instant" });
+  }, [chapter, beat, reading, finished]);
   useEffect(() => setFinished(false), [chapter, beat]);
   const order =
     mode === "epic" && epicOrder.includes(c.id)
@@ -115,88 +136,110 @@ export default function StoryPlayer({
           {reading ? "Cinematic view" : "Reading view"}
         </button>
       </div>
-      <div className="story-location">
-        <MapPin size={14} />
-        {c.location}
-      </div>
-      {mode === "epic" ? (
-        <p className="epic-note">
-          {[
-            "cicones",
-            "cyclops",
-            "aeolus",
-            "giants",
-            "circe",
-            "underworld",
-            "sirens",
-            "strait",
-            "helios",
-          ].includes(c.id)
-            ? "FLASHBACK · Odysseus tells his adventures at the Phaeacian court."
-            : "EPIC ORDER · A teaching route through Homer’s frame story and flashbacks."}
-        </p>
-      ) : null}
-      {mode === "epic" && c.id === "helios" && beat === c.beats.length - 1 ? (
-        <p className="epic-note">
-          The flashback ends here. Calypso and the Phaeacians were covered
-          earlier in this route. We now return to Odysseus arriving in Ithaca.
-        </p>
-      ) : null}
-      {!reading && c.id === "cyclops" ? (
-        <CyclopsScene
-          active={b.object}
-          onInspect={(id) => setInspected([...new Set([...inspected, id])])}
-        />
-      ) : null}
-      <article
-        className="story-narrative"
-        aria-live="polite"
-        aria-atomic="true"
+      <div
+        className="story-scroll"
+        ref={content}
+        role="region"
+        aria-label="Chapter story"
+        tabIndex={reading ? undefined : 0}
       >
-        <p className="eyebrow">
-          {finished
-            ? "JOURNEY COMPLETE"
-            : `${b.kind === "consequence" ? "THE CONSEQUENCE" : "THE STORY"} · ${String(beat + 1).padStart(2, "0")} / ${String(c.beats.length).padStart(2, "0")}`}
-        </p>
-        <h1>{finished ? "At last, home." : c.title}</h1>
-        <p className="chapter-intro">{c.intro}</p>
-        <div className="beat-copy" key={`${c.id}-${beat}`}>
-          <h2>
-            {finished ? "You have reached the end of the story." : b.title}
-          </h2>
-          <p>
-            {finished
-              ? "Revisit a favourite chapter, explore the route, or follow the people who shaped the journey. Your progress is saved on this device."
-              : b.text}
-          </p>
-        </div>
-        <div className="story-characters">
-          <span>IN THIS CHAPTER</span>
-          {c.characters.map((name) => (
-            <button
-              key={name}
-              aria-label={name}
-              onClick={() => selectCharacter(name)}
+        <div className="story-content">
+          <div className="story-location">
+            <MapPin size={14} />
+            {c.location}
+          </div>
+          {mode === "epic" ? (
+            <p className="epic-note">
+              {[
+                "cicones",
+                "cyclops",
+                "aeolus",
+                "giants",
+                "circe",
+                "underworld",
+                "sirens",
+                "strait",
+                "helios",
+              ].includes(c.id)
+                ? "FLASHBACK · Odysseus tells his adventures at the Phaeacian court."
+                : "EPIC ORDER · A teaching route through Homer’s frame story and flashbacks."}
+            </p>
+          ) : null}
+          {mode === "epic" &&
+          c.id === "helios" &&
+          beat === c.beats.length - 1 ? (
+            <p className="epic-note">
+              The flashback ends here. Calypso and the Phaeacians were covered
+              earlier in this route. We now return to Odysseus arriving in
+              Ithaca.
+            </p>
+          ) : null}
+          {!reading && c.id === "cyclops" ? (
+            <CyclopsScene
+              active={b.object}
+              onInspect={(id) => setInspected([...new Set([...inspected, id])])}
+            />
+          ) : null}
+          <article
+            className="story-narrative"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            <p className="eyebrow">
+              {finished
+                ? "JOURNEY COMPLETE"
+                : `${b.kind === "consequence" ? "THE CONSEQUENCE" : "THE STORY"} · ${String(beat + 1).padStart(2, "0")} / ${String(c.beats.length).padStart(2, "0")}`}
+            </p>
+            <h1>{finished ? "At last, home." : c.title}</h1>
+            <p className="chapter-intro">{c.intro}</p>
+            <div className="beat-copy" key={`${c.id}-${beat}`}>
+              <h2>
+                {finished ? "You have reached the end of the story." : b.title}
+              </h2>
+              <p>
+                {finished
+                  ? "Revisit a favourite chapter, explore the route, or follow the people who shaped the journey. Your progress is saved on this device."
+                  : b.text}
+              </p>
+            </div>
+            <div className="story-characters">
+              <span>IN THIS CHAPTER</span>
+              {c.characters.map((name) => (
+                <button
+                  key={name}
+                  aria-label={name}
+                  onClick={() => selectCharacter(name)}
+                >
+                  <Avatar name={name} decorative />
+                  <span>{name}</span>
+                </button>
+              ))}
+            </div>
+            <a
+              className="source-link"
+              href={c.sourceUrl}
+              target="_blank"
+              rel="noreferrer"
             >
-              <Avatar name={name} decorative />
-              <span>{name}</span>
-            </button>
-          ))}
+              {c.source} ↗
+            </a>
+            {c.id === "cyclops" ? (
+              <span className="inspect-count">
+                {inspected.length}/3 objects explored · exploration is optional
+              </span>
+            ) : null}
+          </article>
         </div>
-        <a
-          className="source-link"
-          href={c.sourceUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {c.source} ↗
-        </a>
-        {c.id === "cyclops" ? (
-          <span className="inspect-count">
-            {inspected.length}/3 objects explored · exploration is optional
-          </span>
-        ) : null}
-      </article>
+      </div>
+      {!reading ? (
+        <div className="story-scroll-hint" aria-hidden="true">
+          {moreToRead ? (
+            <>
+              Scroll to read more <span>↓</span>
+            </>
+          ) : null}
+        </div>
+      ) : null}
       <div className="story-controls">
         <div className="playback">
           <button

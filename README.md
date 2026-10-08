@@ -14,11 +14,13 @@ An interactive story atlas for people discovering Odysseus's story for the first
 - **The Cyclops:** inspect the stone door, wine and sheep to understand the escape. Exploration is optional.
 - **World atlas:** orbit, zoom and pan the 3D map, or use the 2D view. Mythic placements and real geographical references are kept distinct.
 - **Characters:** 21 profiles with motivations, chapter links and a readable tree of direct relationships.
-- **Your pace:** manual progression, replay, reading view, reduced motion, quiet graphics and saved progress.
+- **Your pace:** a consistent cinematic frame that fills the screen, anchored navigation, manual progression, replay, reading view, reduced motion, quiet graphics and saved progress. Longer text scrolls inside the frame.
 - **Your choice of sound:** device read-aloud and opt-in sea ambience. The complete story works silently.
 - **Ancient sources:** visible book references, qualified mythology and an optional route explaining Homer's epic order.
 
 ![The Cyclops chapter with its interactive cave objects](docs/screenshots/cyclops-desktop.png)
+
+![The cinematic frame keeps its size when continuing through longer beats](docs/screenshots/cinematic-desktop.png)
 
 ![Odysseus passes the Sirens, with artwork blended into the maritime part](docs/screenshots/sirens-desktop.png)
 

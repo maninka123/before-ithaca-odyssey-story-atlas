@@ -22,6 +22,8 @@ Map labels use a dedicated DOM portal so scene disposal cannot remove React-owne
 
 Native dialogs trap focus, restore the invoking control and support Escape. Essential story text is outside the 3D scene. All map destinations also have ordinary buttons. Touch navigation, reduced motion, manual progression and a reading view retain the complete narrative.
 
+In cinematic view, the app shell is a viewport-height grid with the header's actual height and a flexible story frame. Chapter navigation and playback do not shrink or move with story length. A named, keyboard-scrollable region holds location notes, cave exploration and the narrative; it resets to the beginning on a new beat. A resize observer updates the reading cue without changing the frame height. The landscape covers the same frame across beats. Reading view restores natural document scrolling.
+
 Build with `npm run build`. Relative asset paths and hash entry links work under a GitHub Pages repository subdirectory. The Pages workflow builds `dist`; `scripts/package.mjs` includes the original reading edition as an archive. Nothing is published by local development or build commands.
 
 ## Scope of this edition

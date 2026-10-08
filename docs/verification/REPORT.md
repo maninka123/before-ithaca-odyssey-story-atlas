@@ -7,10 +7,10 @@ Verified locally on Windows and published to GitHub Pages on 8 October 2026.
 | Check | Result |
 | --- | --- |
 | `npm run build` | Passed: TypeScript, Vite production bundles and legacy archive packaging |
-| `npx playwright test` | 106 passed, 2 explicitly skipped across Chrome, Edge, Firefox and WebKit for the typography/artwork edition; the cave-layout follow-up passed 20 focused checks |
+| `npx playwright test` | 122 passed, 2 explicitly skipped across Chrome, Edge, Firefox and WebKit for the consistent cinematic frame edition |
 | Automated accessibility | No axe WCAG 2 A/AA or WCAG 2.1 AA violations in the landing, story, character and 2D atlas views in all four browser projects |
 | `node scripts/production-smoke.mjs` | Passed against the built site under `/before-ithaca-odyssey-story-atlas/` at port 4180, with no page errors or failed HTTP responses |
-| `node scripts/inspect.mjs` | Refreshed nine desktop/mobile screenshots under `docs/screenshots/`; no page errors or failed HTTP responses |
+| `node scripts/inspect.mjs` | Refreshed ten desktop/mobile screenshots under `docs/screenshots/`; no page errors or failed HTTP responses |
 
 The browser suite completes all 21 chapters and checks saved progress, damaged saved-state recovery, chapter search, chronology/epic-order navigation, Cyclops object explanations, replay and previous/next beats, reading view, character relationships, chapter links, keyboard navigation, dialog focus restoration, reduced motion, mobile navigation and horizontal overflow at 390 × 844. Quality changes also apply while the atlas is already open.
 
@@ -41,6 +41,12 @@ New browser checks verify all 21 artwork paths, distinct scene assignments, pres
 The wine marker could cross the story because its position was tied to the full chapter height. The cave exploration controls now occupy a reserved row above the narrative. Object explanations also participate in normal layout, so opening them moves the story down. Obsolete viewport-height marker overrides were removed.
 
 New geometry checks cover all six beats at 320x568, 390x844, 640x450, 768x1024, 1024x600, 1440x900 and 1920x1080 in Chrome, Edge, Firefox and WebKit. They check marker/text separation, explanation/text separation, clicks and overflow. Epic-order notes and enlarged 26px paragraphs/78px titles were checked too. These checks, the existing responsive cave/zoom checks, and accessibility checks passed (20 checks). TypeScript/build and the 21-chapter production smoke passed. Screenshots include the final consequence beat that previously collided with the wine marker.
+
+## Consistent cinematic frame follow-up
+
+Longer beats previously increased the document height, moved the controls and changed the background crop. The header and cinematic player now share a fixed 100dvh app shell. Navigation stays anchored, its forward button keeps a consistent width, and the landscape fills the same frame. The title starts at the same position across a chapter's beats. Large type is preserved; overflow uses a named, keyboard-scrollable story region with a reading cue. New beats reset that region to the top. Reading view and other pages use natural document height.
+
+The new checks traverse all 21 chapters and 66 beats at 1920x910, 1024x600 and 320x568, comparing frame, landscape, navigation and forward-button geometry after every advance. They verify no document overflow, a stable chapter-title position and the completion screen. Enlarged 26px paragraphs/78px titles, keyboard End scrolling, source visibility, scroll reset, phone-to-landscape resizing, and returning to reading view/home also pass. The existing cave separation checks pass across all seven viewport sizes. All 122 checks passed across Chrome, Edge, Firefox and WebKit; the same two scoped WebGL checks remain skipped. TypeScript/build and production smoke passed. Screenshots were inspected; the capture script now waits for the opening landscape and portrait sprite decoding before saving the cinematic preview.
 
 ## Published verification
 

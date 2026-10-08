@@ -96,40 +96,42 @@ export default function App() {
       <a className="skip-link" href="#main">
         Skip to the story
       </a>
-      <Header open={setModal} />
-      <main id="main" tabIndex={-1}>
-        {view === "home" ? (
-          <Landing />
-        ) : view === "story" ? (
-          <StoryPlayer openChapters={() => setModal("chapters")} />
-        ) : (
-          <Suspense
-            fallback={
-              <div className="page-loading">
-                Opening the{" "}
-                {view === "atlas" ? "world atlas" : "character explorer"}…
-              </div>
-            }
-          >
-            {view === "atlas" ? <Atlas /> : <CharacterExplorer />}
-          </Suspense>
-        )}
-      </main>
-      {view !== "story" ? (
-        <footer className="footer">
-          <div>
-            <Compass size={23} strokeWidth={1} />
-            <span>
-              BEFORE ITHACA
-              <small>A journey through myth, war and homecoming.</small>
-            </span>
-          </div>
-          <span className="footer-credit">Created by Pasindu Ranasinghe</span>
-          <button onClick={() => setModal("sources")}>
-            Sources & the story <span>↗</span>
-          </button>
-        </footer>
-      ) : null}
+      <div className="app-shell">
+        <Header open={setModal} />
+        <main id="main" tabIndex={-1}>
+          {view === "home" ? (
+            <Landing />
+          ) : view === "story" ? (
+            <StoryPlayer openChapters={() => setModal("chapters")} />
+          ) : (
+            <Suspense
+              fallback={
+                <div className="page-loading">
+                  Opening the{" "}
+                  {view === "atlas" ? "world atlas" : "character explorer"}…
+                </div>
+              }
+            >
+              {view === "atlas" ? <Atlas /> : <CharacterExplorer />}
+            </Suspense>
+          )}
+        </main>
+        {view !== "story" ? (
+          <footer className="footer">
+            <div>
+              <Compass size={23} strokeWidth={1} />
+              <span>
+                BEFORE ITHACA
+                <small>A journey through myth, war and homecoming.</small>
+              </span>
+            </div>
+            <span className="footer-credit">Created by Pasindu Ranasinghe</span>
+            <button onClick={() => setModal("sources")}>
+              Sources & the story <span>↗</span>
+            </button>
+          </footer>
+        ) : null}
+      </div>
       {modal ? (
         <Modal
           title={

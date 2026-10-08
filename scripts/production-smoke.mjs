@@ -115,6 +115,21 @@ try {
         .locator(".beat-copy p")
         .evaluate((el) => parseFloat(getComputedStyle(el).fontSize)),
     ).toBeGreaterThanOrEqual(18);
+    expect(
+      await page.evaluate(() => {
+        const frame = document
+          .querySelector(".story-player")
+          .getBoundingClientRect();
+        const controls = document
+          .querySelector(".story-controls")
+          .getBoundingClientRect();
+        return (
+          document.documentElement.scrollHeight === innerHeight &&
+          Math.abs(frame.bottom - innerHeight) < 1 &&
+          Math.abs(controls.bottom - innerHeight) < 1
+        );
+      }),
+    ).toBe(true);
     if (id === "cyclops") {
       for (let beat = 1; beat <= 6; beat++) {
         await page.getByRole("button", { name: `Go to beat ${beat}` }).click();
@@ -130,6 +145,36 @@ try {
       }
     }
   }
+  for (const viewport of [
+    { width: 1920, height: 910 },
+    { width: 390, height: 844 },
+  ]) {
+    await page.setViewportSize(viewport);
+    await page.goto(new URL("#/story/apple", base).href);
+    let initial;
+    for (let beat = 1; beat <= 3; beat++) {
+      await page.getByRole("button", { name: `Go to beat ${beat}` }).click();
+      const bounds = await page.evaluate(() => {
+        const rect = document
+          .querySelector(".story-controls")
+          .getBoundingClientRect();
+        const art = document
+          .querySelector(".chapter-art")
+          .getBoundingClientRect();
+        return {
+          bottom: rect.bottom,
+          top: rect.top,
+          artHeight: art.height,
+          height: innerHeight,
+          pageHeight: document.documentElement.scrollHeight,
+        };
+      });
+      initial ??= bounds;
+      expect(bounds).toEqual(initial);
+      expect(bounds.pageHeight).toBe(viewport.height);
+      expect(bounds.bottom).toBe(viewport.height);
+    }
+  }
   expect(errors).toEqual([]);
   console.log(
     JSON.stringify(
@@ -139,6 +184,8 @@ try {
         audioLifecycle: "opt-in, running, suspended, closed",
         archive: archive.status(),
         artwork: "21 chapters checked; 18 overlays and three part openings",
+        cinematicFrame:
+          "viewport filled; stable controls and landscape across beats on desktop and phone",
       },
       null,
       2,

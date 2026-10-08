@@ -11,6 +11,29 @@ const page = await browser.newPage({
   deviceScaleFactor: 1,
   reducedMotion: "reduce",
 });
+async function waitForStoryArtwork() {
+  await page
+    .locator(".part-backdrop, .portrait-sprite")
+    .evaluateAll(async (elements) => {
+      const urls = new Set(
+        elements
+          .map(
+            (el) =>
+              getComputedStyle(el).backgroundImage.match(
+                /url\("?([^"\)]+)"?\)/,
+              )?.[1],
+          )
+          .filter(Boolean),
+      );
+      await Promise.all(
+        [...urls].map(async (src) => {
+          const image = new Image();
+          image.src = src;
+          await image.decode();
+        }),
+      );
+    });
+}
 const errors = [];
 page.on("pageerror", (e) => errors.push(e.message));
 page.on("response", (r) => {
@@ -27,6 +50,10 @@ await page.locator("img").evaluateAll(async (images) => {
   );
 });
 await page.screenshot({ path: "docs/screenshots/landing-desktop.png" });
+await page.goto("http://127.0.0.1:5173/#/story/apple");
+await page.getByRole("button", { name: "Go to beat 3" }).click();
+await waitForStoryArtwork();
+await page.screenshot({ path: "docs/screenshots/cinematic-desktop.png" });
 await page.getByRole("button", { name: "World atlas", exact: true }).click();
 await page.locator("canvas").waitFor({ timeout: 30000 });
 await page.waitForTimeout(2000);
@@ -37,6 +64,7 @@ await page
   .fill("cyclops");
 await page.locator(".chapter-library button").click();
 await page.locator(".chapter-blend.ready").waitFor();
+await waitForStoryArtwork();
 await page.screenshot({
   path: "docs/screenshots/cyclops-desktop.png",
   fullPage: true,
