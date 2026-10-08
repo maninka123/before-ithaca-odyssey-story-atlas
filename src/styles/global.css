@@ -903,10 +903,28 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+.cave-exploration {
+  position: relative;
+  flex-shrink: 0;
+  height: clamp(210px, 25svh, 300px);
+  margin-top: 20px;
+}
+.hotspots {
+  position: absolute;
+  inset: 56px 0 0;
+  pointer-events: none;
+  z-index: 4;
+}
+.cave-player:not(.reading) .story-narrative {
+  margin-top: 0;
+  padding-top: 28px;
+}
+
 .scene-tools {
   position: absolute;
-  top: 135px;
-  right: 5.2%;
+  top: 0;
+  right: 0;
   display: flex;
   align-items: center;
   z-index: 3;
@@ -929,14 +947,9 @@ img {
   width: 30px;
   height: 30px;
 }
-.hotspots {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-}
 .hotspot {
   position: absolute;
+  transform: translate(-50%, -50%);
   display: flex;
   gap: 9px;
   align-items: center;
@@ -967,14 +980,14 @@ img {
   transform: scale(1.15);
 }
 .object-note {
-  position: absolute;
+  position: relative;
+  width: min(100%, 460px);
+  align-self: flex-end;
+  margin-top: 12px;
   z-index: 5;
-  right: 5.2%;
-  top: 210px;
   background: #0a2028ee;
   backdrop-filter: blur(20px);
   padding: 24px;
-  width: 320px;
   border: 1px solid #d4b78055;
   border-radius: 4px;
   box-shadow: 0 15px 50px #0006;
@@ -2161,27 +2174,11 @@ img {
   .beat-copy p {
     font-size: 14px;
   }
-  .scene-tools {
-    top: 116px;
-    right: 5%;
-  }
   .scene-tools > span {
     display: none;
   }
   .hotspots .hotspot > span {
     font-size: 14px;
-  }
-  .hotspot:nth-child(1) {
-    left: 78% !important;
-    top: 28% !important;
-  }
-  .hotspot:nth-child(2) {
-    left: 23% !important;
-    top: 37% !important;
-  }
-  .hotspot:nth-child(3) {
-    left: 54% !important;
-    top: 34% !important;
   }
   .story-backdrop {
     background-position: center 20%;
@@ -2210,11 +2207,6 @@ img {
     min-height: 45px;
     padding: 0 17px;
     font-size: 14px;
-  }
-  .object-note {
-    width: 280px;
-    right: 5%;
-    top: 190px;
   }
   .reading .story-narrative h1 {
     font-size: 49px;
@@ -2651,9 +2643,6 @@ img {
     font-size: 14px;
     gap: 12px;
   }
-  .scene-tools {
-    top: 101px;
-  }
   .hotspot > svg {
     width: 28px;
     height: 28px;
@@ -2662,21 +2651,7 @@ img {
   .hotspot > span {
     display: none;
   }
-  .hotspot:nth-child(1) {
-    top: 23% !important;
-    left: 78% !important;
-  }
-  .hotspot:nth-child(2) {
-    top: 29% !important;
-    left: 23% !important;
-  }
-  .hotspot:nth-child(3) {
-    top: 27% !important;
-    left: 55% !important;
-  }
   .object-note {
-    top: 152px;
-    width: 270px;
     padding: 20px;
   }
   .object-note p {
@@ -2835,12 +2810,6 @@ img {
     z-index: 5;
   }
 }
-.hotspots {
-  z-index: 4;
-}
-.hotspots .hotspot {
-  transform: translateY(-20px);
-}
 .story-narrative {
   pointer-events: none;
 }
@@ -2944,13 +2913,6 @@ img {
   }
   .flat-marker:nth-of-type(2) {
     transform: translate(-50%, -110%);
-  }
-}
-@media (min-width: 801px) and (max-height: 850px) {
-  .hotspots {
-    top: 150px;
-    bottom: auto;
-    height: 230px;
   }
 }
 
@@ -3174,20 +3136,6 @@ img {
   .cave-player .story-backdrop {
     background-size: auto 440px;
   }
-  .hotspots {
-    top: 140px;
-    height: 250px;
-    bottom: auto;
-  }
-  .hotspot:nth-child(1) {
-    top: 30% !important;
-  }
-  .hotspot:nth-child(2) {
-    top: 62% !important;
-  }
-  .hotspot:nth-child(3) {
-    top: 53% !important;
-  }
 }
 @media (max-width: 520px) {
   .story-narrative h1 {
@@ -3216,9 +3164,6 @@ img {
   }
   .advance-controls {
     gap: 4px;
-  }
-  .scene-tools {
-    top: 115px;
   }
   .landing {
     height: auto;

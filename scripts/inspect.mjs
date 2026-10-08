@@ -37,7 +37,17 @@ await page
   .fill("cyclops");
 await page.locator(".chapter-library button").click();
 await page.locator(".chapter-blend.ready").waitFor();
-await page.screenshot({ path: "docs/screenshots/cyclops-desktop.png" });
+await page.screenshot({
+  path: "docs/screenshots/cyclops-desktop.png",
+  fullPage: true,
+});
+await page.getByRole("button", { name: "Go to beat 6" }).click();
+await page.evaluate(() => window.scrollTo(0, 0));
+await page.screenshot({
+  path: "docs/screenshots/cyclops-consequence-desktop.png",
+  fullPage: true,
+});
+await page.getByRole("button", { name: "Replay chapter" }).click();
 await page.getByRole("button", { name: "Characters", exact: true }).click();
 await page.locator(".profile-opening").waitFor();
 await page.screenshot({ path: "docs/screenshots/characters-desktop.png" });

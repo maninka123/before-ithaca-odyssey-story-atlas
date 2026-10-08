@@ -7,7 +7,7 @@ Verified locally on Windows and published to GitHub Pages on 8 October 2026.
 | Check | Result |
 | --- | --- |
 | `npm run build` | Passed: TypeScript, Vite production bundles and legacy archive packaging |
-| `npx playwright test` | 106 passed, 2 explicitly skipped across Chrome, Edge, Firefox and WebKit after all final changes |
+| `npx playwright test` | 106 passed, 2 explicitly skipped across Chrome, Edge, Firefox and WebKit for the typography/artwork edition; the cave-layout follow-up passed 20 focused checks |
 | Automated accessibility | No axe WCAG 2 A/AA or WCAG 2.1 AA violations in the landing, story, character and 2D atlas views in all four browser projects |
 | `node scripts/production-smoke.mjs` | Passed against the built site under `/before-ithaca-odyssey-story-atlas/` at port 4180, with no page errors or failed HTTP responses |
 | `node scripts/inspect.mjs` | Refreshed eight desktop/mobile screenshots under `docs/screenshots/`; no page errors or failed HTTP responses |
@@ -32,9 +32,15 @@ The structured content audit validates all 21 chapters, 66 beats, 21 character p
 
 ## Chapter artwork and readability follow-up
 
-The interface typography now has a 14px floor, with 19px desktop/18px mobile story paragraphs and 15?16px main controls. Shared circular portraits appear with character names in each chapter. Fifteen newly generated illustrations join the existing horse, cave and underworld scenes, giving 18 distinct overlays. Chapters 01, 06 and 17 use only their part background. Later scenes retain that landscape beneath feathered CSS masks and fade between decoded overlays.
+The interface typography now has a 14px floor, with 19px desktop/18px mobile story paragraphs and 15-16px main controls. Shared circular portraits appear with character names in each chapter. Fifteen newly generated illustrations join the existing horse, cave and underworld scenes, giving 18 distinct overlays. Chapters 01, 06 and 17 use only their part background. Later scenes retain that landscape beneath feathered CSS masks and fade between decoded overlays.
 
 New browser checks verify all 21 artwork paths, distinct scene assignments, preserved part backgrounds, circular portraits, font sizes, six-character layouts at 320/768/1440px, character links, and usable fallback when artwork cannot load. The production smoke check also visits every chapter. `scripts/chapter-review.mjs` captured all 21 chapters at both 1440px and 390px (42 captures); none had horizontal overflow. Visual review corrected the enlarged landing text/footer overlap, narrow character-profile overflow, portrait-name wrapping, and compact atlas label collisions. Maps under 700px wide show chapter numbers and retain full names in accessible controls, the destination list and selected-place panel. The final map adjustment passed the compact-atlas and multi-viewport interaction checks in all four browsers (8 checks). A failed image on an in-app chapter transition now fades the previous illustration back to the part landscape; the complete focused artwork suite then passed in all four browsers (16 checks). Full prompts and source assets are retained under `docs/artwork/`; deployable images are in `public/images/chapters/` (3.54 MB total).
+
+## Cave marker overlap follow-up
+
+The wine marker could cross the story because its position was tied to the full chapter height. The cave exploration controls now occupy a reserved row above the narrative. Object explanations also participate in normal layout, so opening them moves the story down. Obsolete viewport-height marker overrides were removed.
+
+New geometry checks cover all six beats at 320x568, 390x844, 640x450, 768x1024, 1024x600, 1440x900 and 1920x1080 in Chrome, Edge, Firefox and WebKit. They check marker/text separation, explanation/text separation, clicks and overflow. Epic-order notes and enlarged 26px paragraphs/78px titles were checked too. These checks, the existing responsive cave/zoom checks, and accessibility checks passed (20 checks). TypeScript/build and the 21-chapter production smoke passed. Screenshots include the final consequence beat that previously collided with the wine marker.
 
 ## Published verification
 

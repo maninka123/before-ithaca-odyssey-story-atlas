@@ -115,6 +115,20 @@ try {
         .locator(".beat-copy p")
         .evaluate((el) => parseFloat(getComputedStyle(el).fontSize)),
     ).toBeGreaterThanOrEqual(18);
+    if (id === "cyclops") {
+      for (let beat = 1; beat <= 6; beat++) {
+        await page.getByRole("button", { name: `Go to beat ${beat}` }).click();
+        const clear = await page.evaluate(() => {
+          const narrative = document
+            .querySelector(".story-narrative")
+            .getBoundingClientRect();
+          return [...document.querySelectorAll(".hotspot, .scene-tools")].every(
+            (el) => el.getBoundingClientRect().bottom <= narrative.top,
+          );
+        });
+        expect(clear).toBe(true);
+      }
+    }
   }
   expect(errors).toEqual([]);
   console.log(

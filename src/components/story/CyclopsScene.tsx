@@ -40,47 +40,53 @@ export default function CyclopsScene({
   }, [zoom]);
   return (
     <>
-      <div className="scene-tools">
-        <span>
-          <Focus size={14} /> EXPLORE THE ILLUSTRATED CAVE
-        </span>
-        <button
-          className="icon-button"
-          aria-label="Zoom out of cave"
-          disabled={zoom <= 1}
-          onClick={() => {
-            setZoom(Math.max(1, Math.round((zoom - 0.15) * 100) / 100));
-          }}
-        >
-          <Minus size={17} />
-        </button>
-        <button
-          className="icon-button"
-          aria-label="Zoom into cave"
-          disabled={zoom >= 1.3}
-          onClick={() => {
-            setZoom(Math.min(1.3, Math.round((zoom + 0.15) * 100) / 100));
-          }}
-        >
-          <Plus size={17} />
-        </button>
-      </div>
-      <div className="hotspots">
-        {objects.map((o) => (
+      <div
+        className="cave-exploration"
+        role="group"
+        aria-label="Explore the illustrated cave"
+      >
+        <div className="scene-tools">
+          <span>
+            <Focus size={14} /> EXPLORE THE ILLUSTRATED CAVE
+          </span>
           <button
-            key={o.id}
-            className={`hotspot ${active === o.id ? "active" : ""}`}
-            style={{ left: `${o.x}%`, top: `${o.y}%` }}
+            className="icon-button"
+            aria-label="Zoom out of cave"
+            disabled={zoom <= 1}
             onClick={() => {
-              setSelected(o.id);
-              onInspect(o.id);
+              setZoom(Math.max(1, Math.round((zoom - 0.15) * 100) / 100));
             }}
-            aria-label={`Inspect ${o.name}`}
           >
-            <Plus size={16} />
-            <span>{o.name}</span>
+            <Minus size={17} />
           </button>
-        ))}
+          <button
+            className="icon-button"
+            aria-label="Zoom into cave"
+            disabled={zoom >= 1.3}
+            onClick={() => {
+              setZoom(Math.min(1.3, Math.round((zoom + 0.15) * 100) / 100));
+            }}
+          >
+            <Plus size={17} />
+          </button>
+        </div>
+        <div className="hotspots">
+          {objects.map((o) => (
+            <button
+              key={o.id}
+              className={`hotspot ${active === o.id ? "active" : ""}`}
+              style={{ left: `${o.x}%`, top: `${o.y}%` }}
+              onClick={() => {
+                setSelected(o.id);
+                onInspect(o.id);
+              }}
+              aria-label={`Inspect ${o.name}`}
+            >
+              <Plus size={16} />
+              <span>{o.name}</span>
+            </button>
+          ))}
+        </div>
       </div>
       {selected ? (
         <aside className="object-note" aria-live="polite">
