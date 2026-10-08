@@ -13,7 +13,7 @@ An interactive story atlas for people discovering Odysseus's story for the first
 - **The story:** larger, readable text; short narrative beats; circular character portraits; and 18 distinct chapter scenes blended into the three parts' landscapes. Each part's opening chapter keeps its original background.
 - **The Cyclops:** inspect the stone door, wine and sheep to understand the escape. Exploration is optional.
 - **World atlas:** orbit, zoom and pan the 3D map, or use the 2D view. Mythic placements and real geographical references are kept distinct.
-- **Characters:** 21 profiles with motivations, chapter links and a readable tree of direct relationships.
+- **Characters:** chapter portraits open a details popup you can close to continue at the same reading position. Explore related people inside it, or use the separate character explorer for all 21 profiles and chapter links.
 - **Your pace:** a consistent cinematic frame that fills the screen, anchored navigation, manual progression, replay, reading view, reduced motion, quiet graphics and saved progress. Longer text scrolls inside the frame.
 - **Your choice of sound:** device read-aloud and opt-in sea ambience. The complete story works silently.
 - **Ancient sources:** visible book references, qualified mythology and an optional route explaining Homer's epic order.
@@ -27,6 +27,8 @@ An interactive story atlas for people discovering Odysseus's story for the first
 ![The redesigned atlas](docs/screenshots/atlas-desktop.png)
 
 ![Focused character relationships](docs/screenshots/characters-desktop.png)
+
+![Character details open over the story without changing the chapter](docs/screenshots/character-popup-desktop.png)
 
 ## Run locally
 
@@ -69,5 +71,3 @@ The root contains the README, app entry and required package/build/test configur
 The story scenes are cinematic illustrations, with a richer interactive Cyclops chapter. The atlas is rendered in Three.js/React Three Fiber. Fully modeled chapter environments, spatial cave exploration, animated characters, recorded narration and music remain future work.
 
 The original standalone reading edition and its old preview are preserved in `legacy/`. The former standalone URL opens the new app. The redesigned site has no backend, account system or frontend API secrets.
-
-Created by **Pasindu Ranasinghe**.

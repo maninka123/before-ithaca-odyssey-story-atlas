@@ -17,6 +17,7 @@ import { chapters, epicOrder, parts } from "../../data/chapters";
 import { useJourney } from "../../store/journey";
 import { useAudio } from "../../hooks/useAudio";
 import Avatar from "../characters/Avatar";
+import CharacterPreview from "../characters/CharacterPreview";
 import ChapterBackdrop from "./ChapterBackdrop";
 import CyclopsScene from "./CyclopsScene";
 export default function StoryPlayer({
@@ -31,7 +32,6 @@ export default function StoryPlayer({
     setBeat,
     complete,
     setView,
-    selectCharacter,
     mode,
     motion,
     setMotion,
@@ -47,6 +47,7 @@ export default function StoryPlayer({
         }
       : baseBeat;
   const [reading, setReading] = useState(false),
+    [preview, setPreview] = useState<string | null>(null),
     [finished, setFinished] = useState(false),
     [inspected, setInspected] = useState<string[]>([]);
   const audio = useAudio(`${b.title}. ${b.text}`);
@@ -208,7 +209,11 @@ export default function StoryPlayer({
                 <button
                   key={name}
                   aria-label={name}
-                  onClick={() => selectCharacter(name)}
+                  aria-haspopup="dialog"
+                  onClick={(event) => {
+                    event.currentTarget.focus({ preventScroll: true });
+                    setPreview(name);
+                  }}
                 >
                   <Avatar name={name} decorative />
                   <span>{name}</span>
@@ -323,6 +328,9 @@ export default function StoryPlayer({
           )}
         </div>
       </div>
+      {preview ? (
+        <CharacterPreview name={preview} onClose={() => setPreview(null)} />
+      ) : null}
     </section>
   );
 }

@@ -48,6 +48,12 @@ Longer beats previously increased the document height, moved the controls and ch
 
 The new checks traverse all 21 chapters and 66 beats at 1920x910, 1024x600 and 320x568, comparing frame, landscape, navigation and forward-button geometry after every advance. They verify no document overflow, a stable chapter-title position and the completion screen. Enlarged 26px paragraphs/78px titles, keyboard End scrolling, source visibility, scroll reset, phone-to-landscape resizing, and returning to reading view/home also pass. The existing cave separation checks pass across all seven viewport sizes. All 122 checks passed across Chrome, Edge, Firefox and WebKit; the same two scoped WebGL checks remain skipped. TypeScript/build and production smoke passed. Screenshots were inspected; the capture script now waits for the opening landscape and portrait sprite decoding before saving the cinematic preview.
 
+## Character popup and credit removal follow-up
+
+Chapter portraits now open a native character-details dialog in both cinematic and reading views. Descriptions, motivations, actions, sources and related profiles reuse the full explorer's profile component. Related people stay in the popup. Close, Escape, backdrop dismissal and "Return to the story" restore the invoking portrait with scrolling prevented; the story remains mounted. The full character explorer retains its chapter links. The creator credit was removed from the footer, About dialog and README.
+
+Twelve focused checks passed across Chrome, Edge, Firefox and WebKit. They cover every portrait in all 21 chapters at 320x568, no dialog horizontal overflow, related-person selection, unchanged route/history/saved state/beat/reading mode/scroll position, focus restoration, all close controls, focus confinement, WCAG checks and continuing the story afterward. The popup's narrow-phone relationship rows were corrected after an overflow check. Fourteen existing Chrome journey/artwork checks and production build/smoke passed. Desktop/mobile popup screenshots were inspected and added to the capture script.
+
 ## Published verification
 
 [The live story atlas](https://maninka123.github.io/before-ithaca-odyssey-story-atlas/) is served from the production artifact, with Pages configured to use GitHub Actions.

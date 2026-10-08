@@ -75,6 +75,13 @@ await page.screenshot({
   path: "docs/screenshots/cyclops-consequence-desktop.png",
   fullPage: true,
 });
+await page
+  .locator(".story-characters")
+  .getByRole("button", { name: "Polyphemus", exact: true })
+  .click();
+await waitForStoryArtwork();
+await page.screenshot({ path: "docs/screenshots/character-popup-desktop.png" });
+await page.getByRole("button", { name: "Close dialog" }).click();
 await page.getByRole("button", { name: "Replay chapter" }).click();
 await page.getByRole("button", { name: "Characters", exact: true }).click();
 await page.locator(".profile-opening").waitFor();
@@ -86,6 +93,12 @@ await page.screenshot({
   path: "docs/screenshots/cyclops-mobile.png",
   fullPage: true,
 });
+await page
+  .locator(".story-characters")
+  .getByRole("button", { name: "Polyphemus", exact: true })
+  .click();
+await page.screenshot({ path: "docs/screenshots/character-popup-mobile.png" });
+await page.getByRole("button", { name: "Close dialog" }).click();
 await page.evaluate(() => localStorage.clear());
 await page.goto("http://127.0.0.1:5173/");
 await page.locator("img").evaluateAll(async (images) => {

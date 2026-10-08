@@ -125,6 +125,13 @@ test("chapters search, epic order and focused character links work", async ({
     .getByRole("button", { name: /Son of.*Poseidon/ })
     .click();
   await expect(page.locator(".profile-opening h2")).toHaveText("Poseidon");
+  await expect(page).toHaveURL(/story\/cyclops$/);
+  await page.getByRole("button", { name: "Return to the story" }).click();
+  await page.getByRole("button", { name: "Characters", exact: true }).click();
+  await page
+    .locator(".character-names")
+    .getByRole("button", { name: /Poseidon/ })
+    .click();
   await page
     .locator(".character-chapters")
     .getByRole("button", { name: /The Cyclops/ })

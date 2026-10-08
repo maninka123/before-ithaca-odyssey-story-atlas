@@ -52,9 +52,6 @@ export default function About() {
         relief is stylised. These depictions do not establish the historical
         appearance of mythical people or places.
       </p>
-      <p className="made-by">
-        Created by Pasindu Ranasinghe · A guide to ancient myth.
-      </p>
     </div>
   );
 }

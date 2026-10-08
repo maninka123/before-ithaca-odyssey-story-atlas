@@ -125,7 +125,6 @@ export default function App() {
                 <small>A journey through myth, war and homecoming.</small>
               </span>
             </div>
-            <span className="footer-credit">Created by Pasindu Ranasinghe</span>
             <button onClick={() => setModal("sources")}>
               Sources & the story <span>↗</span>
             </button>

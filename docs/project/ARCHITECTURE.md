@@ -24,6 +24,8 @@ Native dialogs trap focus, restore the invoking control and support Escape. Esse
 
 In cinematic view, the app shell is a viewport-height grid with the header's actual height and a flexible story frame. Chapter navigation and playback do not shrink or move with story length. A named, keyboard-scrollable region holds location notes, cave exploration and the narrative; it resets to the beginning on a new beat. A resize observer updates the reading cue without changing the frame height. The landscape covers the same frame across beats. Reading view restores natural document scrolling.
 
+Chapter portraits open `CharacterPreview` as a native dialog with local character selection. The chapter player stays mounted, so closing restores the invoking portrait without changing the chapter, beat, reading mode or scroll position. Related profiles stay inside the dialog. `CharacterProfile` shares the description, motivations, relationships, source and portrait with the full character explorer; chapter-jump buttons are available only in that explorer. Popup headers and return controls stay visible while longer details scroll.
+
 Build with `npm run build`. Relative asset paths and hash entry links work under a GitHub Pages repository subdirectory. The Pages workflow builds `dist`; `scripts/package.mjs` includes the original reading edition as an archive. Nothing is published by local development or build commands.
 
 ## Scope of this edition

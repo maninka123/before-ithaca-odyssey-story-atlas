@@ -143,8 +143,29 @@ try {
         });
         expect(clear).toBe(true);
       }
+      const previousBeat = await page.locator(".beat-copy h2").innerText();
+      await page
+        .locator(".story-characters")
+        .getByRole("button", { name: "Polyphemus", exact: true })
+        .click();
+      const popup = page.getByRole("dialog", { name: "Character details" });
+      await expect(popup.locator(".profile-opening h2")).toHaveText(
+        "Polyphemus",
+      );
+      await expect(page).toHaveURL(/story\/cyclops$/);
+      await popup
+        .locator(".relationship-branches")
+        .getByRole("button", { name: /Son of.*Poseidon/ })
+        .click();
+      await expect(popup.locator(".profile-opening h2")).toHaveText("Poseidon");
+      await popup.getByRole("button", { name: "Return to the story" }).click();
+      await expect(page.locator(".beat-copy h2")).toHaveText(previousBeat);
     }
   }
+  await page.goto(base);
+  await expect(
+    page.getByText("Created by Pasindu Ranasinghe", { exact: false }),
+  ).toHaveCount(0);
   for (const viewport of [
     { width: 1920, height: 910 },
     { width: 390, height: 844 },
@@ -186,6 +207,8 @@ try {
         artwork: "21 chapters checked; 18 overlays and three part openings",
         cinematicFrame:
           "viewport filled; stable controls and landscape across beats on desktop and phone",
+        characterPopup:
+          "details and related profiles stay in the story; closing preserves the beat",
       },
       null,
       2,

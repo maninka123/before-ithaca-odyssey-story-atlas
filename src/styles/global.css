@@ -670,9 +670,6 @@ img {
   margin-top: 5px;
   color: #8ea3a5;
 }
-.footer-credit {
-  font-size: 14px;
-}
 .footer > button {
   font-size: 14px;
   color: var(--muted);
@@ -1586,6 +1583,110 @@ img {
 .modal.wide {
   width: min(760px, calc(100% - 30px));
 }
+.modal:has(.character-preview) {
+  width: min(1000px, calc(100% - 30px));
+  padding: 0;
+}
+.modal:has(.character-preview) .modal-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 20px 28px;
+  margin-bottom: 0;
+  background: #0b2028;
+  border-bottom: 1px solid var(--line);
+}
+.character-preview {
+  padding: 28px;
+}
+.character-preview .profile-opening p:last-child {
+  font-size: 18px;
+}
+.character-preview .profile-facts p,
+.character-preview .character-role {
+  font-size: 16px;
+}
+.character-preview-actions {
+  position: sticky;
+  bottom: 0;
+  padding: 16px 28px;
+  margin: 24px -28px -28px;
+  border-top: 1px solid var(--line);
+  background: #0b2028;
+}
+@media (max-width: 520px) {
+  .character-preview {
+    padding: 20px;
+  }
+  .modal:has(.character-preview) .modal-head {
+    padding: 16px 20px;
+  }
+  .modal:has(.character-preview) .modal-head h2 {
+    font-size: 28px;
+  }
+  .character-preview .profile-opening {
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 6px 16px;
+  }
+  .character-preview .profile-opening > div {
+    display: contents;
+  }
+  .character-preview .profile-opening .avatar.large {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    width: 80px;
+    height: 100px;
+  }
+  .character-preview .profile-opening .eyebrow,
+  .character-preview .profile-opening h2,
+  .character-preview .profile-opening .character-role {
+    grid-column: 2;
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  .character-preview .profile-opening h2 {
+    font-size: 36px;
+  }
+  .character-preview .profile-opening p:last-child {
+    grid-column: 1 / -1;
+    margin-top: 12px;
+  }
+  .character-preview .relationship-tree {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .character-preview .relationship-branches {
+    min-width: 0;
+    margin-left: 0;
+  }
+  .character-preview .relationship-branches > button {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr) 15px;
+    gap: 4px 10px;
+  }
+  .character-preview .relationship-label {
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
+  }
+  .character-preview .relationship-branches strong {
+    grid-column: 2;
+    grid-row: 2;
+    overflow-wrap: anywhere;
+  }
+  .character-preview .relationship-branches .avatar {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+  .character-preview .relationship-branches svg {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+  .character-preview-actions {
+    padding: 16px 20px;
+    margin: 24px -20px -20px;
+  }
+}
 .modal::backdrop {
   background: #021015c9;
   backdrop-filter: blur(8px);
@@ -1764,10 +1865,6 @@ img {
 }
 .source-directory a:hover {
   color: var(--gold);
-}
-.made-by {
-  font-size: 14px !important;
-  color: var(--gold) !important;
 }
 @keyframes sail {
   from {
@@ -2061,9 +2158,6 @@ img {
     font-size: 14px;
   }
   .feature-arrow {
-    display: none;
-  }
-  .footer-credit {
     display: none;
   }
   .page-heading {

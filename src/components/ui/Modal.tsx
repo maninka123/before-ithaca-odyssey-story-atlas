@@ -21,7 +21,7 @@ export default function Modal({
     return () => {
       document.body.style.overflow = previous;
       dialog.close();
-      if (opener?.isConnected) opener.focus();
+      if (opener?.isConnected) opener.focus({ preventScroll: true });
     };
   }, []);
   return (
