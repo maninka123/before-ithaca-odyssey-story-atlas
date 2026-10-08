@@ -1,0 +1,20 @@
+BEFORE ITHACA — THE REDESIGNED STORY ATLAS
+
+1. Install Node.js 22 or newer.
+2. Open a terminal in this project folder.
+3. Run: npm install
+4. Run: npm run dev
+5. Open the local address printed in the terminal, normally http://127.0.0.1:5173.
+
+To preview a production build:
+  npm run build
+  npm run preview
+
+The new experience includes 21 rewritten chapters, a cinematic illustrated landing,
+an interactive Cyclops chapter, a 3D atlas, character profiles and saved progress.
+
+The original file is preserved at legacy/Before_Ithaca_Standalone.html and can
+still be opened as the archived reading edition. The redesigned source app must
+run through the development server or a built static host.
+
+See README.md and docs/verification/REPORT.md in the repository root for screenshots, test results and scope.

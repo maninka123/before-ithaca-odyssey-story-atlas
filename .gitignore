@@ -9,3 +9,9 @@ Before_Ithaca_All_Downloads/
 *.log
 Thumbs.db
 
+node_modules
+dist/
+test-results/
+playwright-report/
+*.tsbuildinfo
+.cache/
