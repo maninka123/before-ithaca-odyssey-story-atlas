@@ -9,7 +9,7 @@ Verified locally on Windows and published to GitHub Pages on 8 October 2026.
 | `npm run build` | Passed: TypeScript, Vite production bundles and legacy archive packaging |
 | `npx playwright test` | 122 passed, 2 explicitly skipped across Chrome, Edge, Firefox and WebKit for the consistent cinematic frame edition |
 | Automated accessibility | No axe WCAG 2 A/AA or WCAG 2.1 AA violations in the landing, story, character and 2D atlas views in all four browser projects |
-| `node scripts/production-smoke.mjs` | Passed against the built site under `/before-ithaca-odyssey-story-atlas/` at port 4180, with no page errors or failed HTTP responses |
+| `node scripts/production-smoke.mjs` | Passed against the local production build at port 4173 and the public HTTPS site, with no page errors or failed HTTP responses |
 | `node scripts/inspect.mjs` | Refreshed ten desktop/mobile screenshots under `docs/screenshots/`; no page errors or failed HTTP responses |
 
 The browser suite completes all 21 chapters and checks saved progress, damaged saved-state recovery, chapter search, chronology/epic-order navigation, Cyclops object explanations, replay and previous/next beats, reading view, character relationships, chapter links, keyboard navigation, dialog focus restoration, reduced motion, mobile navigation and horizontal overflow at 390 × 844. Quality changes also apply while the atlas is already open.
@@ -52,11 +52,11 @@ The new checks traverse all 21 chapters and 66 beats at 1920x910, 1024x600 and 3
 
 [The live story atlas](https://maninka123.github.io/before-ithaca-odyssey-story-atlas/) is served from the production artifact, with Pages configured to use GitHub Actions.
 
-[Workflow run 37767445707](https://github.com/maninka123/before-ithaca-odyssey-story-atlas/actions/runs/37767445707) passed browser checks on Ubuntu/Node 22: **85 passed and 2 scoped WebGL checks skipped** across Chrome, Firefox and WebKit. TypeScript compilation, production packaging, artifact upload and the Pages deployment all succeeded for commit `2a16c25ac6af8a5fce709a39e9295c9fd148679b`.
+[Workflow run 37770687230](https://github.com/maninka123/before-ithaca-odyssey-story-atlas/actions/runs/37770687230) passed browser checks on Ubuntu/Node 22: **91 passed and 2 scoped WebGL checks skipped** across Chrome, Firefox and WebKit. TypeScript compilation, production packaging, artifact upload and the Pages deployment all succeeded for commit `f8d3c1a4918018616a38190055ad579ded321a7f`.
 
-The first workflow attempt was cancelled after unusually slow Ubuntu package downloads; retrying the build job on a fresh runner completed browser installation and all checks successfully.
+This deployment passed on its first attempt.
 
-The production smoke script was then run against the public HTTPS URL. All six Cyclops beats with markers above the narrative, all 21 chapter backgrounds and overlays, circular portraits, large story text, story progression, reading view, character navigation, interactive 3D markers, real-geography switching, quiet-mode fallback, local fonts/artwork, the compatibility redirect, archived original and licence notices all passed. No page errors or failed HTTP responses were recorded. Audio lifecycle checks passed for activation, suspension and cleanup. Pages reports the site as built.
+The production smoke script was then run against the public HTTPS URL. All six Cyclops beats with markers above the narrative, all 21 chapter backgrounds and overlays, circular portraits, large story text, story progression, reading view, character navigation, interactive 3D markers, real-geography switching, quiet-mode fallback, local fonts/artwork, the compatibility redirect, archived original and licence notices all passed. The live cinematic player fills the viewport in all 21 chapters; all three opening beats preserve the landscape height and control position at 1920x910 and 390x844. No page errors or failed HTTP responses were recorded. Audio lifecycle checks passed for activation, suspension and cleanup.
 
 The React review covered semantic controls, native dialog focus, effect cleanup, local-storage validation, lazy loading, stable scene ownership and resource disposal. The primary story does not require the Three.js bundle. The atlas caps pixel ratio, supports reduced-motion rendering and provides equivalent destination buttons outside the canvas.
 
