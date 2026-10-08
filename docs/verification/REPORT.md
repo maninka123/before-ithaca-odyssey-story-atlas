@@ -7,7 +7,7 @@ Verified locally on Windows and published to GitHub Pages on 8 October 2026.
 | Check | Result |
 | --- | --- |
 | `npm run build` | Passed: TypeScript, Vite production bundles and legacy archive packaging |
-| `npx playwright test` | 102 passed, 2 explicitly skipped across Chrome, Edge, Firefox and WebKit; a subsequent compact-map adjustment passed 8 focused browser checks |
+| `npx playwright test` | 106 passed, 2 explicitly skipped across Chrome, Edge, Firefox and WebKit after all final changes |
 | Automated accessibility | No axe WCAG 2 A/AA or WCAG 2.1 AA violations in the landing, story, character and 2D atlas views in all four browser projects |
 | `node scripts/production-smoke.mjs` | Passed against the built site under `/before-ithaca-odyssey-story-atlas/` at port 4180, with no page errors or failed HTTP responses |
 | `node scripts/inspect.mjs` | Refreshed eight desktop/mobile screenshots under `docs/screenshots/`; no page errors or failed HTTP responses |
@@ -40,9 +40,9 @@ New browser checks verify all 21 artwork paths, distinct scene assignments, pres
 
 [The live story atlas](https://maninka123.github.io/before-ithaca-odyssey-story-atlas/) is served from the production artifact, with Pages configured to use GitHub Actions.
 
-The preceding redesign deployment, [workflow run 37760624666](https://github.com/maninka123/before-ithaca-odyssey-story-atlas/actions/runs/37760624666) passed browser checks on Ubuntu/Node 22: **67 passed and 2 scoped WebGL checks skipped** across Chrome, Firefox and WebKit. TypeScript compilation, production packaging, artifact upload and the Pages deployment all succeeded for commit `952e03e354f84df7ccb0d80834c84651c72d1346`.
+[Workflow run 37765388299](https://github.com/maninka123/before-ithaca-odyssey-story-atlas/actions/runs/37765388299) passed browser checks on Ubuntu/Node 22: **79 passed and 2 scoped WebGL checks skipped** across Chrome, Firefox and WebKit. TypeScript compilation, production packaging, artifact upload and the Pages deployment all succeeded for commit `d75488ff2a11f693b566be8ffda46d0f38baa1da`.
 
-The production smoke script was then run against the public HTTPS URL. Story progression, reading view, character navigation, interactive 3D markers, real-geography switching, quiet-mode fallback, local fonts/artwork, the compatibility redirect, archived original and licence notices all passed. No page errors or failed HTTP responses were recorded. Audio lifecycle checks passed for activation, suspension and cleanup. Pages reports the site as built.
+The production smoke script was then run against the public HTTPS URL. All 21 chapter backgrounds and overlays, circular portraits, large story text, story progression, reading view, character navigation, interactive 3D markers, real-geography switching, quiet-mode fallback, local fonts/artwork, the compatibility redirect, archived original and licence notices all passed. No page errors or failed HTTP responses were recorded. Audio lifecycle checks passed for activation, suspension and cleanup. Pages reports the site as built.
 
 The React review covered semantic controls, native dialog focus, effect cleanup, local-storage validation, lazy loading, stable scene ownership and resource disposal. The primary story does not require the Three.js bundle. The atlas caps pixel ratio, supports reduced-motion rendering and provides equivalent destination buttons outside the canvas.
 
