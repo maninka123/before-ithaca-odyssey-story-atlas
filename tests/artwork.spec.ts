@@ -56,6 +56,12 @@ test("portraits, names and large text fit narrow and wide chapter layouts", asyn
       .getByRole("button", { name: "Hermes", exact: true })
       .click();
     await expect(page.locator(".profile-opening h2")).toHaveText("Hermes");
+    await page.goto("/");
+    expect(
+      await page
+        .locator(".footer small")
+        .evaluate((el) => parseFloat(getComputedStyle(el).fontSize)),
+    ).toBeGreaterThanOrEqual(14);
   }
 });
 
