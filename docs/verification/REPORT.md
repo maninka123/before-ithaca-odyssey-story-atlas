@@ -1,6 +1,6 @@
 # Verification
 
-Verified locally on Windows on 8 October 2026. GitHub Pages deployment is being prepared after local verification.
+Verified locally on Windows and published to GitHub Pages on 8 October 2026.
 
 ## Results
 
@@ -27,6 +27,16 @@ The landing, Cyclops chapter, atlas and character screenshots were inspected. Th
 The follow-up visual review corrected the narrow-phone title, the short-desktop cave label/text overlap and the narrow-map Troy/Ismarus label overlap. The screenshot utilities explicitly load lazy images before full-page captures. Mythic map numbers now match chapter numbers in both map modes and the destination list; reference places use neutral dots. Completed-route highlights cover only adjacent completed destinations, so jumping to a later chapter cannot imply that all earlier chapters were completed. Map camera reset is disabled in the fixed 2D view.
 
 Files were regrouped into `docs/project/`, `docs/artwork/`, `docs/screenshots/`, `docs/verification/` and `legacy/`. All local Markdown links were checked. The original HTML matches its original Git blob, and the compatibility URL remains available through `public/`. Production output now carries font and runtime dependency notices in `licenses/`.
+
+The structured content audit validates all 21 chapters, 66 beats, 21 character profiles, 14 atlas destinations, relationship endpoints, epic-order references and artwork paths. No broken internal content references were found.
+
+## Published verification
+
+[The live story atlas](https://maninka123.github.io/before-ithaca-odyssey-story-atlas/) is served from the production artifact, with Pages configured to use GitHub Actions.
+
+[Workflow run 37760624666](https://github.com/maninka123/before-ithaca-odyssey-story-atlas/actions/runs/37760624666) passed browser checks on Ubuntu/Node 22: **67 passed and 2 scoped WebGL checks skipped** across Chrome, Firefox and WebKit. TypeScript compilation, production packaging, artifact upload and the Pages deployment all succeeded for commit `952e03e354f84df7ccb0d80834c84651c72d1346`.
+
+The production smoke script was then run against the public HTTPS URL. Story progression, reading view, character navigation, interactive 3D markers, real-geography switching, quiet-mode fallback, local fonts/artwork, the compatibility redirect, archived original and licence notices all passed. No page errors or failed HTTP responses were recorded. Audio lifecycle checks passed for activation, suspension and cleanup. Pages reports the site as built.
 
 The React review covered semantic controls, native dialog focus, effect cleanup, local-storage validation, lazy loading, stable scene ownership and resource disposal. The primary story does not require the Three.js bundle. The atlas caps pixel ratio, supports reduced-motion rendering and provides equivalent destination buttons outside the canvas.
 
