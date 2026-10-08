@@ -7,10 +7,10 @@ Verified locally on Windows and published to GitHub Pages on 8 October 2026.
 | Check | Result |
 | --- | --- |
 | `npm run build` | Passed: TypeScript, Vite production bundles and legacy archive packaging |
-| `npx playwright test` | 122 passed, 2 explicitly skipped across Chrome, Edge, Firefox and WebKit for the consistent cinematic frame edition |
+| `npx playwright test` | 134 passed, 2 explicitly skipped across Chrome, Edge, Firefox and WebKit for the character popup and cinematic frame edition |
 | Automated accessibility | No axe WCAG 2 A/AA or WCAG 2.1 AA violations in the landing, story, character and 2D atlas views in all four browser projects |
 | `node scripts/production-smoke.mjs` | Passed against the local production build at port 4173 and the public HTTPS site, with no page errors or failed HTTP responses |
-| `node scripts/inspect.mjs` | Refreshed ten desktop/mobile screenshots under `docs/screenshots/`; no page errors or failed HTTP responses |
+| `node scripts/inspect.mjs` | Refreshed twelve desktop/mobile screenshots under `docs/screenshots/`; no page errors or failed HTTP responses |
 
 The browser suite completes all 21 chapters and checks saved progress, damaged saved-state recovery, chapter search, chronology/epic-order navigation, Cyclops object explanations, replay and previous/next beats, reading view, character relationships, chapter links, keyboard navigation, dialog focus restoration, reduced motion, mobile navigation and horizontal overflow at 390 × 844. Quality changes also apply while the atlas is already open.
 
@@ -52,17 +52,17 @@ The new checks traverse all 21 chapters and 66 beats at 1920x910, 1024x600 and 3
 
 Chapter portraits now open a native character-details dialog in both cinematic and reading views. Descriptions, motivations, actions, sources and related profiles reuse the full explorer's profile component. Related people stay in the popup. Close, Escape, backdrop dismissal and "Return to the story" restore the invoking portrait with scrolling prevented; the story remains mounted. The full character explorer retains its chapter links. The creator credit was removed from the footer, About dialog and README.
 
-Twelve focused checks passed across Chrome, Edge, Firefox and WebKit. They cover every portrait in all 21 chapters at 320x568, no dialog horizontal overflow, related-person selection, unchanged route/history/saved state/beat/reading mode/scroll position, focus restoration, all close controls, focus confinement, WCAG checks and continuing the story afterward. The popup's narrow-phone relationship rows were corrected after an overflow check. Fourteen existing Chrome journey/artwork checks and production build/smoke passed. Desktop/mobile popup screenshots were inspected and added to the capture script.
+Twelve focused checks passed across Chrome, Edge, Firefox and WebKit. They cover every portrait in all 21 chapters at 320x568, no dialog horizontal overflow, related-person selection, unchanged route/history/saved state/beat/reading mode/scroll position, focus restoration, all close controls, focus confinement, WCAG checks and continuing the story afterward. The popup's narrow-phone relationship rows were corrected after an overflow check. The complete regression suite then passed: 134 checks across all four browser engines, with the same two scoped WebGL skips. Production build/smoke passed. Desktop/mobile popup screenshots were inspected and added to the capture script.
 
 ## Published verification
 
 [The live story atlas](https://maninka123.github.io/before-ithaca-odyssey-story-atlas/) is served from the production artifact, with Pages configured to use GitHub Actions.
 
-[Workflow run 37770687230](https://github.com/maninka123/before-ithaca-odyssey-story-atlas/actions/runs/37770687230) passed browser checks on Ubuntu/Node 22: **91 passed and 2 scoped WebGL checks skipped** across Chrome, Firefox and WebKit. TypeScript compilation, production packaging, artifact upload and the Pages deployment all succeeded for commit `f8d3c1a4918018616a38190055ad579ded321a7f`.
+[Workflow run 37772939474](https://github.com/maninka123/before-ithaca-odyssey-story-atlas/actions/runs/37772939474) passed browser checks on Ubuntu/Node 22: **100 passed and 2 scoped WebGL checks skipped** across Chrome, Firefox and WebKit. TypeScript compilation, production packaging, artifact upload and the Pages deployment all succeeded for commit `077a8cadbcb1d638da7108d57091b0d8af406c9c`.
 
 This deployment passed on its first attempt.
 
-The production smoke script was then run against the public HTTPS URL. All six Cyclops beats with markers above the narrative, all 21 chapter backgrounds and overlays, circular portraits, large story text, story progression, reading view, character navigation, interactive 3D markers, real-geography switching, quiet-mode fallback, local fonts/artwork, the compatibility redirect, archived original and licence notices all passed. The live cinematic player fills the viewport in all 21 chapters; all three opening beats preserve the landscape height and control position at 1920x910 and 390x844. No page errors or failed HTTP responses were recorded. Audio lifecycle checks passed for activation, suspension and cleanup.
+The production smoke script was then run against the public HTTPS URL. All six Cyclops beats with markers above the narrative, all 21 chapter backgrounds and overlays, circular portraits, large story text, story progression, reading view, character navigation, interactive 3D markers, real-geography switching, quiet-mode fallback, local fonts/artwork, the compatibility redirect, archived original and licence notices all passed. The live cinematic player fills the viewport in all 21 chapters; all three opening beats preserve the landscape height and control position at 1920x910 and 390x844. Polyphemus opens in the character-details dialog without leaving the Cyclops chapter; Poseidon opens inside that dialog, and returning to the story preserves the beat. The creator credit is absent from the homepage. No page errors or failed HTTP responses were recorded. Audio lifecycle checks passed for activation, suspension and cleanup.
 
 The React review covered semantic controls, native dialog focus, effect cleanup, local-storage validation, lazy loading, stable scene ownership and resource disposal. The primary story does not require the Three.js bundle. The atlas caps pixel ratio, supports reduced-motion rendering and provides equivalent destination buttons outside the canvas.
 
