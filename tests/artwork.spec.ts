@@ -62,13 +62,19 @@ test("portraits, names and large text fit narrow and wide chapter layouts", asyn
 test("unavailable chapter art preserves the part image and usable story", async ({
   page,
 }) => {
-  await page.route("**/images/chapters/helen.webp", (route) => route.abort());
+  await page.route("**/images/chapters/armies.webp", (route) => route.abort());
   await page.goto("/#/story/helen");
+  await expect(page.locator(".chapter-blend.ready")).toHaveAttribute(
+    "data-scene",
+    "chapters/helen",
+  );
+  await page.getByRole("button", { name: "Go to beat 3" }).click();
+  await page.getByRole("button", { name: "Next chapter", exact: true }).click();
   await expect(page.locator(".part-backdrop")).toBeVisible();
   await expect(page.locator(".beat-copy p")).not.toBeEmpty();
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await expect(page.locator(".beat-copy h2")).toHaveText(
-    chapters[1].beats[1].title,
+    chapters[2].beats[1].title,
   );
   await expect(page.locator(".chapter-blend.ready")).toHaveCount(0);
 });

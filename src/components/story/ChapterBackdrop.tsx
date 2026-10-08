@@ -31,7 +31,9 @@ export default function ChapterBackdrop({ chapter }: { chapter: Chapter }) {
           });
         });
       })
-      .catch(() => {});
+      .catch(() => {
+        if (active) setShown(undefined);
+      });
     return () => {
       active = false;
       cancelAnimationFrame(frame);
