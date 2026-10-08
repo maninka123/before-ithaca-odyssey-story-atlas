@@ -7,48 +7,7 @@ import {
 } from "../../data/characters";
 import { chapters } from "../../data/chapters";
 import { useJourney } from "../../store/journey";
-function Avatar({ name, large = false }: { name: string; large?: boolean }) {
-  const sprite = [
-    "Odysseus",
-    "Penelope",
-    "Telemachus",
-    "Athena",
-    "Poseidon",
-    "Circe",
-    "Calypso",
-    "Polyphemus",
-  ].indexOf(name);
-  const otherSprite = [
-    "Zeus",
-    "Hermes",
-    "Helen",
-    "Paris",
-    "Achilles",
-    "Hector",
-    "Agamemnon",
-    "Menelaus",
-    "Tiresias",
-    "Nausicaa",
-    "Alcinous",
-    "Aeolus",
-    "Eumaeus",
-  ].indexOf(name);
-  const index = sprite >= 0 ? sprite : otherSprite;
-  return (
-    <span className={`avatar ${large ? "large" : ""}`}>
-      <span
-        className="portrait-sprite"
-        role="img"
-        aria-label={`Artistic interpretation of ${name}`}
-        style={{
-          backgroundImage: `url(${import.meta.env.BASE_URL}images/${sprite >= 0 ? "characters" : "other-characters"}.webp)`,
-          backgroundSize: sprite >= 0 ? "400% 200%" : "400% 400%",
-          backgroundPosition: `${((index % 4) * 100) / 3}% ${(Math.floor(index / 4) * 100) / (sprite >= 0 ? 1 : 3)}%`,
-        }}
-      />
-    </span>
-  );
-}
+import Avatar from "./Avatar";
 export default function CharacterExplorer() {
   const { character, selectCharacter, enter } = useJourney();
   const c = characters.find((c) => c.name === character) ?? characters[0];

@@ -2,17 +2,19 @@
 
 ## New cinematic artwork
 
-The voyage, cave, coastal sanctuary, Troy, underworld and character sheets were generated specifically for this redesign using the built-in image generation tool. Optimised project copies are in `public/images/`. These are artistic interpretations of myth, not photographs, excavated reconstructions or licensed commercial game assets. No external game models or copied commercial screenshots are used. Full production prompts are recorded in `docs/artwork/PROMPTS.json`.
+The voyage, cave, coastal sanctuary, Troy, underworld and character sheets were generated specifically for this redesign using the built-in image generation tool. Optimised project copies are in `public/images/`. These are artistic interpretations of myth, not photographs, excavated reconstructions or licensed commercial game assets. No external game models or copied commercial screenshots are used. Full production prompts are recorded in `docs/artwork/PROMPTS.json` and `docs/artwork/CHAPTER_PROMPTS.json`.
 
 | File                    | Intended use                                                        |
 | ----------------------- | ------------------------------------------------------------------- |
-| `voyage.webp`           | Landing and maritime chapters                                       |
+| `voyage.webp`           | Landing and the maritime part background                                       |
 | `cyclops.webp`          | Polyphemus's cave and interactive objects                           |
-| `temple.webp`           | Enchanted coastal sanctuary, Phaeacian shores and Ithaca atmosphere |
-| `troy.webp`             | Trojan War and horse chapters                                       |
+| `temple.webp`           | Background for the first and third parts |
+| `troy.webp`             | Trojan Horse chapter                                       |
 | `underworld.webp`       | Consultation with Tiresias at the edge of Ocean                     |
 | `characters.webp`       | Eight principal character interpretations                           |
 | `other-characters.webp` | Additional character interpretations                                |
+
+Fifteen further scenes were generated individually with the built-in `image_gen` tool on 8 October 2026. Source PNGs are in `docs/artwork/source/chapters/`; optimized WebP assets are in `public/images/chapters/`. They join the existing horse, cave and underworld art to give every later chapter a distinct scene. The opening chapters (01, 06 and 17) use only their part background. CSS masks feather each scene into the persistent part landscape, and decoded images crossfade on chapter changes. If a chapter asset fails to load, the part background and story remain usable. Portraits reuse the generated character sheets through a shared circular avatar component.
 
 Generated architecture and costume are evocative rather than period-accurate documentation. The shared sanctuary artwork does not assert that Circe, Calypso and the palace at Ithaca were the same place.
 

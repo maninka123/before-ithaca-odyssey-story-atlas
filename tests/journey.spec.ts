@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { chapters, partImages } from "../src/data/chapters";
 const ids = [
   "apple",
   "helen",
@@ -202,12 +203,21 @@ test("all chapter illustrations and local assets load", async ({ page }) => {
       failures.push(`${r.status()} ${r.url()}`);
   });
   await page.goto("/");
-  for (const id of ["apple", "horse", "cyclops", "underworld", "reunion"]) {
-    await page.goto(`/#/story/${id}`);
-    await expect(page.locator(".story-backdrop")).toBeVisible();
-    const url = await page
-      .locator(".story-backdrop")
-      .evaluate((el) => getComputedStyle(el).backgroundImage.slice(5, -2));
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  for (const c of chapters) {
+    await page.goto(`/#/story/${c.id}`);
+    const opening = ["apple", "cicones", "ithaca"].includes(c.id);
+    const artwork = page.locator(
+      opening ? ".part-backdrop" : ".chapter-blend.ready .story-backdrop",
+    );
+    await expect(artwork).toBeVisible();
+    if (opening) {
+      expect(c.image).toBe(partImages[c.part - 1]);
+      await expect(page.locator(".chapter-blend")).toHaveCount(0);
+    }
+    const url = await artwork.evaluate((el) =>
+      getComputedStyle(el).backgroundImage.slice(5, -2),
+    );
     const response = await page.request.get(url);
     expect(response.status()).toBe(200);
   }

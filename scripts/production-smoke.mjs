@@ -75,8 +75,47 @@ try {
     new URL("legacy/Before_Ithaca_Standalone.html", base).href,
   );
   expect(archive.status()).toBe(200);
-  const licenses = await page.request.get(new URL("licenses/THIRD_PARTY_NOTICES.txt", base).href);
+  const licenses = await page.request.get(
+    new URL("licenses/THIRD_PARTY_NOTICES.txt", base).href,
+  );
   expect(licenses.status()).toBe(200);
+  for (const [id, overlay] of [
+    ["apple", false],
+    ["cicones", false],
+    ["ithaca", false],
+    ["helen", true],
+    ["armies", true],
+    ["war", true],
+    ["horse", true],
+    ["cyclops", true],
+    ["aeolus", true],
+    ["giants", true],
+    ["circe", true],
+    ["underworld", true],
+    ["sirens", true],
+    ["strait", true],
+    ["helios", true],
+    ["calypso", true],
+    ["phaeacians", true],
+    ["disguise", true],
+    ["bow", true],
+    ["suitors", true],
+    ["reunion", true],
+  ]) {
+    await page.goto(new URL(`#/story/${id}`, base).href);
+    await expect(page.locator(".part-backdrop")).toBeVisible();
+    if (overlay)
+      await expect(page.locator(".chapter-blend.ready")).toBeVisible();
+    else await expect(page.locator(".chapter-blend.ready")).toHaveCount(0);
+    expect(
+      await page.locator(".story-characters .avatar").count(),
+    ).toBeGreaterThan(0);
+    expect(
+      await page
+        .locator(".beat-copy p")
+        .evaluate((el) => parseFloat(getComputedStyle(el).fontSize)),
+    ).toBeGreaterThanOrEqual(18);
+  }
   expect(errors).toEqual([]);
   console.log(
     JSON.stringify(
@@ -85,6 +124,7 @@ try {
         errors,
         audioLifecycle: "opt-in, running, suspended, closed",
         archive: archive.status(),
+        artwork: "21 chapters checked; 18 overlays and three part openings",
       },
       null,
       2,

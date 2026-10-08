@@ -164,7 +164,7 @@ img {
   top: 15px;
 }
 .eyebrow {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.22em;
   font-weight: 600;
   color: var(--gold);
@@ -208,7 +208,7 @@ img {
   display: block;
   font-family: "Manrope", Arial, sans-serif;
   letter-spacing: 0.27em;
-  font-size: 8px;
+  font-size: 14px;
   margin-top: 4px;
   color: var(--muted);
 }
@@ -220,7 +220,7 @@ img {
 }
 .main-nav > button {
   height: 100%;
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
   color: #b5c0c0;
   padding: 0;
@@ -284,7 +284,7 @@ img {
   gap: 15px;
   min-height: 51px;
   padding: 0 23px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.07em;
   border-radius: 3px;
@@ -306,7 +306,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 12px;
+  font-size: 14px;
   color: #dfdfd5;
   padding: 8px 0;
 }
@@ -314,7 +314,7 @@ img {
   color: var(--gold);
 }
 .text-button.small {
-  font-size: 10px;
+  font-size: 14px;
 }
 .status-dot {
   display: inline-block;
@@ -372,7 +372,7 @@ img {
   z-index: 2;
 }
 .hero-copy > .eyebrow {
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 0.19em;
   margin-bottom: 25px;
 }
@@ -397,7 +397,7 @@ img {
   color: #efeee4;
 }
 .hero-description {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.85;
   color: #bcc8c9;
   margin-top: 20px;
@@ -409,15 +409,15 @@ img {
   margin-top: 28px;
 }
 .hero-actions .button {
-  font-size: 10px;
+  font-size: 14px;
   min-height: 52px;
   gap: 14px;
 }
 .hero-actions .text-button {
-  font-size: 11px;
+  font-size: 14px;
 }
 .journey-note {
-  font-size: 9px;
+  font-size: 14px;
   color: #9cafb1;
   margin-top: 16px;
   letter-spacing: 0.03em;
@@ -433,11 +433,11 @@ img {
   align-items: center;
   justify-content: space-between;
   color: #9eb0b2;
-  font-size: 10px;
+  font-size: 14px;
   z-index: 3;
 }
 .scroll-hint {
-  font-size: 8px;
+  font-size: 14px;
   letter-spacing: 0.2em;
   display: flex;
   align-items: center;
@@ -447,11 +447,11 @@ img {
   color: var(--gold);
 }
 .hero-bottom-note {
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 0.05em;
 }
 .hero-bottom .small {
-  font-size: 10px;
+  font-size: 14px;
 }
 .scene-caption {
   position: absolute;
@@ -468,7 +468,7 @@ img {
   background: #d4b78088;
 }
 .scene-caption > span:last-child {
-  font-size: 8px;
+  font-size: 14px;
   letter-spacing: 0.25em;
   color: #dac89f;
 }
@@ -486,7 +486,7 @@ img {
   top: 35%;
   writing-mode: vertical-rl;
   letter-spacing: 0.3em;
-  font-size: 8px;
+  font-size: 14px;
   color: #bcc9c677;
 }
 .journey-overview {
@@ -506,7 +506,7 @@ img {
   margin-top: 8px;
 }
 .overview-heading > p {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
   margin-bottom: 5px;
 }
@@ -543,7 +543,7 @@ img {
   opacity: 0.7;
 }
 .part-strip small {
-  font-size: 8px;
+  font-size: 14px;
   color: var(--muted);
   letter-spacing: 0.12em;
   display: block;
@@ -566,7 +566,7 @@ img {
   font-size: 30px;
 }
 .featured-heading > span {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 .feature-strip {
@@ -599,7 +599,7 @@ img {
   position: absolute;
   top: 18px;
   left: 20px;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.1em;
   color: #e9d2a3;
 }
@@ -610,7 +610,7 @@ img {
   right: 35px;
 }
 .feature-copy small {
-  font-size: 7px;
+  font-size: 14px;
   letter-spacing: 0.2em;
   color: var(--gold);
 }
@@ -620,7 +620,7 @@ img {
   margin: 9px 0 5px;
 }
 .feature-copy p {
-  font-size: 10px;
+  font-size: 14px;
   color: #b6c4c5;
 }
 .feature-arrow {
@@ -633,7 +633,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   padding-top: 22px;
 }
@@ -671,10 +671,10 @@ img {
   color: #8ea3a5;
 }
 .footer-credit {
-  font-size: 9px;
+  font-size: 14px;
 }
 .footer > button {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 .footer > button > span {
@@ -724,11 +724,11 @@ img {
   gap: 20px;
 }
 .story-top > .text-button {
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 0.12em;
 }
 .story-top > span {
-  font-size: 8px;
+  font-size: 14px;
   letter-spacing: 0.16em;
   color: #c6d1cb;
 }
@@ -739,14 +739,14 @@ img {
   gap: 8px;
   margin-top: 20px;
   color: #c8d1c9;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.025em;
   z-index: 2;
 }
 .epic-note {
   z-index: 2;
   position: relative;
-  font-size: 10px;
+  font-size: 14px;
   color: #d5c598;
   background: #08191e99;
   padding: 9px 13px;
@@ -768,7 +768,7 @@ img {
   color: #f1ecdf;
 }
 .chapter-intro {
-  font-size: 12px;
+  font-size: 14px;
   color: #c3cfca;
   line-height: 1.6;
   margin-top: 11px;
@@ -787,7 +787,7 @@ img {
   margin-bottom: 8px;
 }
 .beat-copy p {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8;
   max-width: 590px;
   color: #c9d2d0;
@@ -800,7 +800,7 @@ img {
   margin-top: 24px;
 }
 .story-characters > span {
-  font-size: 7px;
+  font-size: 14px;
   letter-spacing: 0.17em;
   color: #8fa7a9;
   margin-right: 5px;
@@ -809,7 +809,7 @@ img {
   padding: 6px 10px;
   border: 1px solid #ffffff21;
   color: #c6d2d0;
-  font-size: 9px;
+  font-size: 14px;
   border-radius: 3px;
 }
 .story-characters > button:hover {
@@ -818,7 +818,7 @@ img {
 }
 .source-link {
   display: inline-block;
-  font-size: 9px;
+  font-size: 14px;
   color: #9aaeb0;
   margin-top: 17px;
   text-decoration: underline;
@@ -829,7 +829,7 @@ img {
   color: var(--gold);
 }
 .inspect-count {
-  font-size: 8px;
+  font-size: 14px;
   color: #9bb0b0;
   margin-left: 20px;
 }
@@ -920,7 +920,7 @@ img {
   display: flex;
   gap: 8px;
   align-items: center;
-  font-size: 7px;
+  font-size: 14px;
   letter-spacing: 0.13em;
   color: #c9d2ce;
   padding-right: 8px;
@@ -954,7 +954,7 @@ img {
   transition: transform 0.2s;
 }
 .hotspot > span {
-  font-size: 9px;
+  font-size: 14px;
   background: #07191cc9;
   padding: 7px 10px;
   border-radius: 3px;
@@ -985,7 +985,7 @@ img {
   top: 8px;
 }
 .object-note > .eyebrow {
-  font-size: 8px;
+  font-size: 14px;
 }
 .object-note h3 {
   font-family: var(--serif);
@@ -993,7 +993,7 @@ img {
   margin: 10px 0;
 }
 .object-note p {
-  font-size: 12px;
+  font-size: 14px;
   color: #b9c9c8;
 }
 .page-shell {
@@ -1015,7 +1015,7 @@ img {
   margin: 9px 0 13px;
 }
 .page-heading p:not(.eyebrow) {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
 }
 .segmented {
@@ -1028,7 +1028,7 @@ img {
   align-items: center;
 }
 .segmented > button {
-  font-size: 10px;
+  font-size: 14px;
   padding: 11px 14px;
   color: #a5b7b8;
   border-radius: 2px;
@@ -1066,7 +1066,7 @@ img {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 8px;
+  font-size: 14px;
   letter-spacing: 0.13em;
   color: #d2c29e;
 }
@@ -1091,7 +1091,7 @@ img {
   justify-content: space-between;
   padding: 17px 20px;
   border-top: 1px solid var(--line);
-  font-size: 8px;
+  font-size: 14px;
   color: #8fa9ac;
   gap: 15px;
   background: #081d24;
@@ -1102,7 +1102,7 @@ img {
   align-items: center;
   gap: 6px;
   white-space: nowrap;
-  font-size: 8px;
+  font-size: 14px;
   background: #071a20ee;
   border: 1px solid #a8b0a244;
   border-radius: 3px;
@@ -1112,7 +1112,7 @@ img {
 }
 .map-marker span {
   color: var(--gold);
-  font-size: 7px;
+  font-size: 14px;
 }
 .map-marker strong {
   font-weight: 500;
@@ -1146,23 +1146,23 @@ img {
   margin: 8px 0 10px;
 }
 .destination-copy > .eyebrow {
-  font-size: 7px;
+  font-size: 14px;
   letter-spacing: 0.16em;
 }
 .destination-chapter {
-  font-size: 8px;
+  font-size: 14px;
   color: #d0bd93;
   letter-spacing: 0.07em;
 }
 .destination-copy > p {
-  font-size: 11px;
+  font-size: 14px;
   color: #b5c5c4;
   margin: 15px 0 20px;
 }
 .destination-copy > .button {
   width: 100%;
   min-height: 44px;
-  font-size: 10px;
+  font-size: 14px;
   justify-content: space-between;
   padding: 0 14px;
 }
@@ -1179,7 +1179,7 @@ img {
   color: #c7b583;
 }
 .geography-note > p {
-  font-size: 9px;
+  font-size: 14px;
   line-height: 1.8;
 }
 .atlas-note {
@@ -1195,7 +1195,7 @@ img {
   margin-top: 2px;
 }
 .atlas-note p {
-  font-size: 10px;
+  font-size: 14px;
   color: #95abad;
 }
 .destination-list {
@@ -1211,12 +1211,12 @@ img {
   gap: 9px;
   align-items: center;
   padding: 11px 12px;
-  font-size: 10px;
+  font-size: 14px;
   color: #a4babc;
 }
 .destination-list > button > span {
   color: var(--gold);
-  font-size: 8px;
+  font-size: 14px;
 }
 .destination-list > button.active {
   border-color: #d4b78077;
@@ -1229,7 +1229,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
 }
 .flat-map {
@@ -1251,7 +1251,7 @@ img {
   color: #e5d4ae;
   background: #08191eed;
   padding: 10px;
-  font-size: 11px;
+  font-size: 14px;
 }
 .flat-marker {
   position: absolute;
@@ -1260,14 +1260,14 @@ img {
   align-items: center;
   gap: 7px;
   padding: 7px 8px;
-  font-size: 9px;
+  font-size: 14px;
   background: #0a2029f5;
   border: 1px solid #829b9477;
   border-radius: 3px;
   white-space: nowrap;
 }
 .flat-marker > span {
-  font-size: 8px;
+  font-size: 14px;
   color: var(--gold);
 }
 .flat-marker.active {
@@ -1299,7 +1299,7 @@ img {
   border: 0;
   background: none;
   color: #eee7d6;
-  font-size: 11px;
+  font-size: 14px;
   outline: none;
   min-width: 0;
 }
@@ -1313,7 +1313,7 @@ img {
   margin: 14px 0 18px;
 }
 .group-filters > button {
-  font-size: 8px;
+  font-size: 14px;
   padding: 8px 7px;
   color: #99aeb0;
 }
@@ -1348,7 +1348,7 @@ img {
   display: block;
 }
 .character-names small {
-  font-size: 8px;
+  font-size: 14px;
   color: #8fa8aa;
   display: block;
   margin-top: 3px;
@@ -1403,11 +1403,11 @@ img {
 }
 .profile-opening .character-role {
   color: #d9c298;
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 13px;
 }
 .profile-opening p:last-child {
-  font-size: 12px;
+  font-size: 14px;
   color: #b6c8c6;
   max-width: 500px;
 }
@@ -1418,10 +1418,10 @@ img {
   padding: 27px 0;
 }
 .profile-facts .eyebrow {
-  font-size: 8px;
+  font-size: 14px;
 }
 .profile-facts p {
-  font-size: 11px;
+  font-size: 14px;
   color: #abc1bf;
   margin-top: 7px;
 }
@@ -1438,7 +1438,7 @@ img {
   font-size: 28px;
 }
 .relationship-heading > span {
-  font-size: 8px;
+  font-size: 14px;
   color: #91a9ac;
 }
 .relationship-tree {
@@ -1504,7 +1504,7 @@ img {
 }
 .relationship-label {
   width: 125px;
-  font-size: 10px;
+  font-size: 14px;
   color: #9fb4b4;
 }
 .relationship-branches strong {
@@ -1537,12 +1537,12 @@ img {
   width: 100%;
   text-align: left;
   padding: 13px 0;
-  font-size: 11px;
+  font-size: 14px;
   color: #bbcecb;
 }
 .character-chapters > button > span {
   color: var(--gold);
-  font-size: 9px;
+  font-size: 14px;
 }
 .character-chapters > button > svg {
   margin-left: auto;
@@ -1552,7 +1552,7 @@ img {
   color: var(--gold);
 }
 .portrait-note {
-  font-size: 8px;
+  font-size: 14px;
   color: #799698;
   margin-top: 15px;
 }
@@ -1584,7 +1584,7 @@ img {
   margin-bottom: 25px;
 }
 .modal-head .eyebrow {
-  font-size: 8px;
+  font-size: 14px;
 }
 .modal-head h2 {
   font-family: var(--serif);
@@ -1602,18 +1602,18 @@ img {
   gap: 15px;
 }
 .library-options > span {
-  font-size: 9px;
+  font-size: 14px;
   color: var(--muted);
   white-space: nowrap;
 }
 .library-note {
-  font-size: 11px;
+  font-size: 14px;
   color: #92acae;
   line-height: 1.85;
   margin: 17px 0;
 }
 .chapter-library h3 {
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 0.16em;
   color: var(--gold);
   padding: 22px 0 11px;
@@ -1635,7 +1635,7 @@ img {
 .chapter-number {
   width: 22px;
   color: var(--gold);
-  font-size: 11px;
+  font-size: 14px;
   flex-shrink: 0;
 }
 .chapter-library button > span:nth-child(2) {
@@ -1648,7 +1648,7 @@ img {
 }
 .chapter-library small {
   display: block;
-  font-size: 9px;
+  font-size: 14px;
   color: #8fa9ac;
   margin-top: 4px;
 }
@@ -1656,12 +1656,12 @@ img {
   color: var(--gold);
 }
 .empty {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
   padding: 25px 5px;
 }
 .settings-content > p {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
 }
 .setting {
@@ -1681,7 +1681,7 @@ img {
   margin-bottom: 6px;
 }
 .setting p {
-  font-size: 11px;
+  font-size: 14px;
   color: #92adae;
   max-width: 390px;
 }
@@ -1691,7 +1691,7 @@ img {
   padding: 10px 12px;
   border-radius: 3px;
   color: #d9c699;
-  font-size: 11px;
+  font-size: 14px;
   max-width: 145px;
 }
 .toggle {
@@ -1718,7 +1718,7 @@ img {
   background: var(--gold);
 }
 .about-content > p {
-  font-size: 12px;
+  font-size: 14px;
   color: #abc0bf;
   line-height: 1.85;
   margin: 15px 0;
@@ -1741,7 +1741,7 @@ img {
   margin-top: 20px;
 }
 .source-directory a {
-  font-size: 10px;
+  font-size: 14px;
   color: #bdc8b9;
   display: flex;
   justify-content: space-between;
@@ -1752,7 +1752,7 @@ img {
   color: var(--gold);
 }
 .made-by {
-  font-size: 9px !important;
+  font-size: 14px !important;
   color: var(--gold) !important;
 }
 @keyframes sail {
@@ -1814,10 +1814,10 @@ img {
     font-size: 21px;
   }
   .brand small {
-    font-size: 7px;
+    font-size: 14px;
   }
   .main-nav > button {
-    font-size: 11px;
+    font-size: 14px;
   }
   .landing {
     height: calc(100svh - 78px);
@@ -1880,7 +1880,7 @@ img {
   }
   .relationship-label {
     width: 95px;
-    font-size: 9px;
+    font-size: 14px;
   }
   .relationship-branches {
     padding-left: 14px;
@@ -1905,7 +1905,7 @@ img {
     font-size: 23px;
   }
   .part-strip small {
-    font-size: 7px;
+    font-size: 14px;
   }
   .feature-copy h3 {
     font-size: 25px;
@@ -1948,7 +1948,7 @@ img {
   .main-nav > button {
     height: 45px;
     text-align: left;
-    font-size: 13px;
+    font-size: 14px;
   }
   .main-nav > button.active:after {
     height: 1px;
@@ -1969,7 +1969,7 @@ img {
     font-size: 107px;
   }
   .hero-copy > .eyebrow {
-    font-size: 8px;
+    font-size: 14px;
     letter-spacing: 0.14em;
   }
   .hero-image {
@@ -2002,7 +2002,7 @@ img {
     font-size: 40px;
   }
   .overview-heading > p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .part-strip {
     grid-template-columns: 1fr;
@@ -2024,7 +2024,7 @@ img {
     font-size: 25px;
   }
   .part-strip small {
-    font-size: 8px;
+    font-size: 14px;
   }
   .feature-strip {
     gap: 13px;
@@ -2038,13 +2038,13 @@ img {
     right: 14px;
   }
   .feature-copy small {
-    font-size: 6px;
+    font-size: 14px;
   }
   .feature-copy h3 {
     font-size: 23px;
   }
   .feature-copy p {
-    font-size: 9px;
+    font-size: 14px;
   }
   .feature-arrow {
     display: none;
@@ -2121,7 +2121,7 @@ img {
     font-size: 19px;
   }
   .character-names small {
-    font-size: 7px;
+    font-size: 14px;
     max-width: 150px;
   }
   .character-profile {
@@ -2158,7 +2158,7 @@ img {
     font-size: 46px;
   }
   .beat-copy p {
-    font-size: 13px;
+    font-size: 14px;
   }
   .scene-tools {
     top: 116px;
@@ -2168,7 +2168,7 @@ img {
     display: none;
   }
   .hotspots .hotspot > span {
-    font-size: 8px;
+    font-size: 14px;
   }
   .hotspot:nth-child(1) {
     left: 78% !important;
@@ -2208,7 +2208,7 @@ img {
   .advance-controls .button {
     min-height: 45px;
     padding: 0 17px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .object-note {
     width: 280px;
@@ -2238,7 +2238,7 @@ img {
     letter-spacing: 0.06em;
   }
   .brand small {
-    font-size: 6px;
+    font-size: 14px;
     letter-spacing: 0.19em;
   }
   .brand svg {
@@ -2259,7 +2259,7 @@ img {
     width: 86%;
   }
   .hero-copy > .eyebrow {
-    font-size: 7px;
+    font-size: 14px;
     letter-spacing: 0.11em;
     gap: 8px;
   }
@@ -2279,7 +2279,7 @@ img {
     margin-top: 26px;
   }
   .hero-description {
-    font-size: 11px;
+    font-size: 14px;
     line-height: 1.85;
     max-width: 290px;
     margin-top: 20px;
@@ -2295,16 +2295,16 @@ img {
   }
   .hero-actions .button {
     min-height: 48px;
-    font-size: 9px;
+    font-size: 14px;
     gap: 16px;
     padding: 0 18px;
   }
   .hero-actions .text-button {
-    font-size: 11px;
+    font-size: 14px;
     padding: 7px 0;
   }
   .journey-note {
-    font-size: 8px;
+    font-size: 14px;
     max-width: 290px;
     line-height: 1.9;
     margin-top: 8px;
@@ -2329,10 +2329,10 @@ img {
     padding-top: 17px;
   }
   .hero-bottom > .text-button {
-    font-size: 8px;
+    font-size: 14px;
   }
   .scroll-hint {
-    font-size: 6px;
+    font-size: 14px;
     letter-spacing: 0.12em;
   }
   .journey-overview {
@@ -2342,7 +2342,7 @@ img {
     font-size: 36px;
   }
   .overview-heading > p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .featured-heading {
     margin-top: 34px;
@@ -2354,7 +2354,7 @@ img {
     font-size: 28px;
   }
   .featured-heading > span {
-    font-size: 9px;
+    font-size: 14px;
   }
   .feature-strip {
     grid-template-columns: 1fr;
@@ -2368,13 +2368,13 @@ img {
     bottom: 22px;
   }
   .feature-copy small {
-    font-size: 7px;
+    font-size: 14px;
   }
   .feature-copy h3 {
     font-size: 32px;
   }
   .feature-copy p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .feature-arrow {
     display: block;
@@ -2391,19 +2391,19 @@ img {
     font-size: 15px;
   }
   .footer small {
-    font-size: 8px;
+    font-size: 14px;
   }
   .footer > button {
-    font-size: 9px;
+    font-size: 14px;
   }
   .page-heading h1 {
     font-size: 43px;
   }
   .page-heading p:not(.eyebrow) {
-    font-size: 11px;
+    font-size: 14px;
   }
   .page-heading .eyebrow {
-    font-size: 8px;
+    font-size: 14px;
   }
   .map-layout {
     gap: 16px;
@@ -2412,11 +2412,11 @@ img {
     padding: 9px 11px;
   }
   .map-toolbar > span {
-    font-size: 6px;
+    font-size: 14px;
     gap: 7px;
   }
   .map-toolbar .small {
-    font-size: 8px;
+    font-size: 14px;
     gap: 6px;
   }
   .map-toolbar > div {
@@ -2426,13 +2426,13 @@ img {
     height: 400px;
   }
   .map-marker {
-    font-size: 7px;
+    font-size: 14px;
     padding: 6px;
     gap: 4px;
   }
   .map-bottom {
     padding: 13px 10px;
-    font-size: 7px;
+    font-size: 14px;
     gap: 7px;
     flex-wrap: wrap;
   }
@@ -2450,28 +2450,28 @@ img {
     max-width: none;
   }
   .destination-copy > p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .geography-note > p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .atlas-note p {
-    font-size: 9px;
+    font-size: 14px;
   }
   .destination-list {
     gap: 7px;
   }
   .destination-list > button {
-    font-size: 9px;
+    font-size: 14px;
     padding: 10px;
   }
   .flat-marker {
-    font-size: 6px;
+    font-size: 14px;
     padding: 5px;
     gap: 3px;
   }
   .flat-marker span {
-    font-size: 6px;
+    font-size: 14px;
   }
   .profile-opening {
     gap: 19px;
@@ -2486,13 +2486,13 @@ img {
     font-size: 43px;
   }
   .profile-opening .eyebrow {
-    font-size: 8px;
+    font-size: 14px;
   }
   .profile-opening .character-role {
-    font-size: 10px;
+    font-size: 14px;
   }
   .profile-opening p:last-child {
-    font-size: 11px;
+    font-size: 14px;
   }
   .profile-facts {
     grid-template-columns: 1fr;
@@ -2532,7 +2532,7 @@ img {
   .relationship-label {
     width: 91px;
     flex-shrink: 0;
-    font-size: 8px;
+    font-size: 14px;
   }
   .relationship-branches > button {
     gap: 9px;
@@ -2545,7 +2545,7 @@ img {
     font-size: 26px;
   }
   .character-chapters > button {
-    font-size: 10px;
+    font-size: 14px;
   }
   .story-player {
     min-height: calc(100svh - 70px);
@@ -2555,19 +2555,19 @@ img {
     padding-bottom: 12px;
   }
   .story-top > .text-button {
-    font-size: 8px;
+    font-size: 14px;
     letter-spacing: 0.07em;
     gap: 7px;
   }
   .story-location {
-    font-size: 8px;
+    font-size: 14px;
   }
   .story-narrative {
     padding-top: 225px;
     padding-bottom: 20px;
   }
   .story-narrative > .eyebrow {
-    font-size: 8px;
+    font-size: 14px;
   }
   .story-narrative h1 {
     font-size: 38px;
@@ -2575,7 +2575,7 @@ img {
     max-width: 310px;
   }
   .chapter-intro {
-    font-size: 11px;
+    font-size: 14px;
     max-width: 320px;
   }
   .beat-copy {
@@ -2586,7 +2586,7 @@ img {
     font-size: 24px;
   }
   .beat-copy p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.85;
   }
   .story-characters {
@@ -2595,22 +2595,22 @@ img {
   }
   .story-characters > span {
     width: 100%;
-    font-size: 6px;
+    font-size: 14px;
     margin-bottom: 4px;
   }
   .story-characters > button {
-    font-size: 8px;
+    font-size: 14px;
     padding: 6px 8px;
   }
   .story-narrative .source-link {
-    font-size: 8px;
+    font-size: 14px;
     max-width: 320px;
     line-height: 1.7;
   }
   .inspect-count {
     display: block;
     margin: 10px 0 0;
-    font-size: 7px;
+    font-size: 14px;
   }
   .story-controls {
     gap: 10px;
@@ -2647,7 +2647,7 @@ img {
   .advance-controls .button {
     min-height: 43px;
     padding: 0 12px;
-    font-size: 9px;
+    font-size: 14px;
     gap: 12px;
   }
   .scene-tools {
@@ -2679,7 +2679,7 @@ img {
     padding: 20px;
   }
   .object-note p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .object-note h3 {
     font-size: 25px;
@@ -2693,13 +2693,13 @@ img {
     line-height: 1.85;
   }
   .reading .chapter-intro {
-    font-size: 12px;
+    font-size: 14px;
   }
   .reading .beat-copy h2 {
     font-size: 28px;
   }
   .epic-note {
-    font-size: 8px;
+    font-size: 14px;
   }
   .modal {
     padding: 21px;
@@ -2710,7 +2710,7 @@ img {
     font-size: 30px;
   }
   .modal-head .eyebrow {
-    font-size: 7px;
+    font-size: 14px;
   }
   .modal-head > .icon-button {
     width: 30px;
@@ -2722,31 +2722,31 @@ img {
     gap: 12px;
   }
   .segmented > button {
-    font-size: 9px;
+    font-size: 14px;
     padding: 10px 11px;
   }
   .chapter-library strong {
     font-size: 21px;
   }
   .chapter-library small {
-    font-size: 8px;
+    font-size: 14px;
   }
   .chapter-library button {
     padding: 14px 4px;
     gap: 10px;
   }
   .library-note {
-    font-size: 10px;
+    font-size: 14px;
   }
   .setting {
     gap: 15px;
   }
   .setting p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .setting select {
     max-width: 115px;
-    font-size: 9px;
+    font-size: 14px;
     padding: 9px;
   }
   .setting h3 {
@@ -2756,17 +2756,17 @@ img {
     grid-template-columns: 1fr;
   }
   .about-content > p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .settings-content > p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .resume-line {
     gap: 15px;
-    font-size: 9px;
+    font-size: 14px;
   }
   .resume-line .text-button {
-    font-size: 9px;
+    font-size: 14px;
   }
 }
 .map-3d {
@@ -2835,19 +2835,19 @@ img {
 }
 @media (min-width: 801px) {
   .main-nav > button {
-    font-size: 13px;
+    font-size: 14px;
   }
   .hero-description {
     font-size: 14px;
   }
   .journey-note {
-    font-size: 10px;
+    font-size: 14px;
   }
   .hero-actions .button {
-    font-size: 11px;
+    font-size: 14px;
   }
   .hero-actions .text-button {
-    font-size: 12px;
+    font-size: 14px;
   }
   .chapter-intro {
     font-size: 14px;
@@ -2856,46 +2856,46 @@ img {
     font-size: 15px;
   }
   .story-characters > button {
-    font-size: 10px;
+    font-size: 14px;
   }
   .story-top > .text-button {
-    font-size: 10px;
+    font-size: 14px;
   }
   .story-top > span {
-    font-size: 9px;
+    font-size: 14px;
   }
   .story-narrative .source-link {
-    font-size: 10px;
+    font-size: 14px;
   }
   .profile-opening p:last-child {
     font-size: 14px;
   }
   .profile-facts p {
-    font-size: 13px;
+    font-size: 14px;
   }
   .relationship-label {
-    font-size: 11px;
+    font-size: 14px;
   }
   .character-chapters > button {
-    font-size: 12px;
+    font-size: 14px;
   }
   .destination-copy > p {
-    font-size: 13px;
+    font-size: 14px;
   }
   .destination-chapter {
-    font-size: 9px;
+    font-size: 14px;
   }
   .geography-note > p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .page-heading p:not(.eyebrow) {
     font-size: 14px;
   }
   .map-marker {
-    font-size: 9px;
+    font-size: 14px;
   }
   .destination-list > button {
-    font-size: 11px;
+    font-size: 14px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2926,5 +2926,321 @@ img {
     top: 150px;
     bottom: auto;
     height: 230px;
+  }
+}
+
+/* Readable typography and a continuous illustrated world. */
+.hero-description,
+.overview-heading > p,
+.profile-opening p:last-child,
+.profile-facts p,
+.destination-copy > p,
+.geography-note > p,
+.page-heading p:not(.eyebrow),
+.about-content > p,
+.settings-content > p {
+  font-size: 17px;
+}
+.button,
+.text-button,
+.hero-actions .button,
+.hero-actions .text-button,
+.advance-controls .button {
+  font-size: 16px;
+  letter-spacing: 0.035em;
+}
+.journey-note,
+.hero-bottom-note,
+.scroll-hint,
+.hero-bottom .text-button,
+.story-location {
+  font-size: 15px;
+}
+.story-top > .text-button {
+  font-size: 15px;
+  letter-spacing: 0.05em;
+}
+.story-top > span {
+  letter-spacing: 0.08em;
+}
+.chapter-art,
+.part-backdrop,
+.chapter-blend {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.part-backdrop {
+  background-size: cover;
+  background-position: center top;
+}
+.chapter-blend {
+  opacity: 0;
+  transition: opacity 1.4s ease;
+  /* Feather all edges into the part landscape; avoid any rectangular seam. */
+  mask-image:
+    linear-gradient(90deg, transparent, #000 16%, #000 88%, transparent),
+    linear-gradient(0deg, transparent, #000 38%, #000 82%, transparent);
+  mask-composite: intersect;
+}
+.chapter-blend.ready {
+  opacity: 1;
+}
+.chapter-blend .story-backdrop {
+  background-position: center top;
+}
+.story-shade {
+  background:
+    linear-gradient(90deg, #04151ef0, #04151eba 36%, #04151e15 76%),
+    linear-gradient(0deg, #04151e 0%, #04151ee8 16%, #04151e55 60%, #04151e55);
+}
+.story-narrative {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  max-width: 740px;
+}
+.story-narrative h1 {
+  font-size: clamp(44px, 4vw, 64px);
+}
+.chapter-intro,
+.reading .chapter-intro {
+  font-size: 17px;
+  max-width: 630px;
+}
+.beat-copy h2 {
+  font-size: 30px;
+}
+.beat-copy p,
+.reading .beat-copy p {
+  font-size: 19px;
+  line-height: 1.8;
+  max-width: 640px;
+}
+.story-characters {
+  gap: 12px;
+  align-items: start;
+  margin-top: 26px;
+}
+.story-characters > span {
+  flex-basis: 100%;
+  letter-spacing: 0.1em;
+  color: #b8c7c6;
+  margin-bottom: 2px;
+}
+.story-characters > button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 0;
+  width: 94px;
+  font-size: 15px;
+  line-height: 1.35;
+  border: 0;
+  background: transparent;
+  white-space: nowrap;
+}
+.story-characters .avatar {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #d4b78088;
+  box-shadow: 0 3px 18px #0005;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+.story-characters > button:hover .avatar,
+.story-characters > button:focus-visible .avatar {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+.reading .story-narrative {
+  padding-top: 40px;
+}
+.inspect-count {
+  display: block;
+  margin: 12px 0 0;
+}
+.scene-tools > span {
+  max-width: 180px;
+}
+@media (max-width: 1100px) {
+  .hero-bottom {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .hero-bottom-note {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .chapter-art {
+    bottom: auto;
+    height: 600px;
+  }
+  .chapter-blend {
+    mask-image:
+      linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent),
+      linear-gradient(0deg, transparent, #000 35%, #000 82%, transparent);
+  }
+  .chapter-blend .story-backdrop {
+    background-size: auto 440px;
+    background-repeat: no-repeat;
+  }
+  .part-backdrop {
+    background-size: auto 600px;
+  }
+  .story-narrative {
+    padding-top: 230px;
+    margin-top: 0;
+  }
+  .story-shade {
+    background: linear-gradient(
+      0deg,
+      #04151e 0%,
+      #04151ef5 50%,
+      #04151e22 85%,
+      #04151e88
+    );
+  }
+  .chapter-intro,
+  .reading .chapter-intro {
+    font-size: 16px;
+  }
+  .beat-copy p,
+  .reading .beat-copy p {
+    font-size: 18px;
+  }
+  .story-top {
+    gap: 12px;
+  }
+  .story-top > .text-button {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+  .story-characters {
+    gap: 10px;
+  }
+  .story-characters > button {
+    width: 88px;
+    font-size: 14px;
+  }
+  .story-characters .avatar {
+    width: 58px;
+    height: 58px;
+  }
+  .story-controls {
+    flex-wrap: wrap;
+  }
+  .playback .icon-button {
+    width: 36px;
+    height: 40px;
+  }
+  .advance-controls {
+    margin-left: auto;
+  }
+  .advance-controls .button {
+    font-size: 15px;
+    padding: 0 16px;
+  }
+  .reading .story-narrative {
+    padding-top: 35px;
+  }
+  .cave-player .story-backdrop {
+    background-size: auto 440px;
+  }
+  .hotspots {
+    top: 140px;
+    height: 250px;
+    bottom: auto;
+  }
+  .hotspot:nth-child(1) {
+    top: 30% !important;
+  }
+  .hotspot:nth-child(2) {
+    top: 62% !important;
+  }
+  .hotspot:nth-child(3) {
+    top: 53% !important;
+  }
+}
+@media (max-width: 520px) {
+  .story-narrative h1 {
+    font-size: 42px;
+    max-width: none;
+  }
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+  .hero-actions .button {
+    padding: 0 16px;
+    font-size: 14px;
+  }
+  .hero-bottom {
+    align-items: start;
+  }
+  .story-controls {
+    row-gap: 14px;
+  }
+  .playback {
+    gap: 4px;
+  }
+  .advance-controls .button {
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .advance-controls {
+    gap: 4px;
+  }
+  .scene-tools {
+    top: 115px;
+  }
+  .landing {
+    height: auto;
+    min-height: 800px;
+    padding-bottom: 26px;
+  }
+  .hero-copy {
+    padding-bottom: 0;
+  }
+  .hero-bottom {
+    position: relative;
+    margin: 28px 6% 0;
+    inset: auto;
+    width: auto;
+    padding-top: 20px;
+  }
+  .hero-actions {
+    gap: 16px;
+  }
+  .journey-note {
+    margin-top: 20px;
+  }
+  .character-layout,
+  .character-index,
+  .character-profile {
+    min-width: 0;
+  }
+  .search-field {
+    width: 100%;
+  }
+  .profile-opening {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .profile-opening > div {
+    width: 100%;
+    min-width: 0;
+  }
+  .profile-opening .avatar.large {
+    width: 120px;
+    height: 145px;
+  }
+  .character-names {
+    max-width: 100%;
+  }
+  .story-characters > button {
+    width: calc((100% - 20px) / 3);
   }
 }

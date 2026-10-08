@@ -7,10 +7,10 @@ Verified locally on Windows and published to GitHub Pages on 8 October 2026.
 | Check | Result |
 | --- | --- |
 | `npm run build` | Passed: TypeScript, Vite production bundles and legacy archive packaging |
-| `npx playwright test` | 90 passed, 2 explicitly skipped across Chrome, Edge, Firefox and WebKit |
+| `npx playwright test` | 102 passed, 2 explicitly skipped across Chrome, Edge, Firefox and WebKit |
 | Automated accessibility | No axe WCAG 2 A/AA or WCAG 2.1 AA violations in the landing, story, character and 2D atlas views in all four browser projects |
 | `node scripts/production-smoke.mjs` | Passed against the built site under `/before-ithaca-odyssey-story-atlas/` at port 4180, with no page errors or failed HTTP responses |
-| `node scripts/inspect.mjs` | Refreshed six desktop/mobile screenshots under `docs/screenshots/`; no page errors or failed HTTP responses |
+| `node scripts/inspect.mjs` | Refreshed eight desktop/mobile screenshots under `docs/screenshots/`; no page errors or failed HTTP responses |
 
 The browser suite completes all 21 chapters and checks saved progress, damaged saved-state recovery, chapter search, chronology/epic-order navigation, Cyclops object explanations, replay and previous/next beats, reading view, character relationships, chapter links, keyboard navigation, dialog focus restoration, reduced motion, mobile navigation and horizontal overflow at 390 × 844. Quality changes also apply while the atlas is already open.
 
@@ -30,11 +30,17 @@ Files were regrouped into `docs/project/`, `docs/artwork/`, `docs/screenshots/`,
 
 The structured content audit validates all 21 chapters, 66 beats, 21 character profiles, 14 atlas destinations, relationship endpoints, epic-order references and artwork paths. No broken internal content references were found.
 
+## Chapter artwork and readability follow-up
+
+The interface typography now has a 14px floor, with 19px desktop/18px mobile story paragraphs and 15?16px main controls. Shared circular portraits appear with character names in each chapter. Fifteen newly generated illustrations join the existing horse, cave and underworld scenes, giving 18 distinct overlays. Chapters 01, 06 and 17 use only their part background. Later scenes retain that landscape beneath feathered CSS masks and fade between decoded overlays.
+
+New browser checks verify all 21 artwork paths, distinct scene assignments, preserved part backgrounds, circular portraits, font sizes, six-character layouts at 320/768/1440px, character links, and usable fallback when artwork cannot load. The production smoke check also visits every chapter. `scripts/chapter-review.mjs` captured all 21 chapters at both 1440px and 390px (42 captures); none had horizontal overflow. Visual review corrected the enlarged landing text/footer overlap, narrow character-profile overflow, and portrait-name wrapping. Full prompts and source assets are retained under `docs/artwork/`; deployable images are in `public/images/chapters/` (3.54 MB total).
+
 ## Published verification
 
 [The live story atlas](https://maninka123.github.io/before-ithaca-odyssey-story-atlas/) is served from the production artifact, with Pages configured to use GitHub Actions.
 
-[Workflow run 37760624666](https://github.com/maninka123/before-ithaca-odyssey-story-atlas/actions/runs/37760624666) passed browser checks on Ubuntu/Node 22: **67 passed and 2 scoped WebGL checks skipped** across Chrome, Firefox and WebKit. TypeScript compilation, production packaging, artifact upload and the Pages deployment all succeeded for commit `952e03e354f84df7ccb0d80834c84651c72d1346`.
+The preceding redesign deployment, [workflow run 37760624666](https://github.com/maninka123/before-ithaca-odyssey-story-atlas/actions/runs/37760624666) passed browser checks on Ubuntu/Node 22: **67 passed and 2 scoped WebGL checks skipped** across Chrome, Firefox and WebKit. TypeScript compilation, production packaging, artifact upload and the Pages deployment all succeeded for commit `952e03e354f84df7ccb0d80834c84651c72d1346`.
 
 The production smoke script was then run against the public HTTPS URL. Story progression, reading view, character navigation, interactive 3D markers, real-geography switching, quiet-mode fallback, local fonts/artwork, the compatibility redirect, archived original and licence notices all passed. No page errors or failed HTTP responses were recorded. Audio lifecycle checks passed for activation, suspension and cleanup. Pages reports the site as built.
 

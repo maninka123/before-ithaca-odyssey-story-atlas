@@ -10,7 +10,7 @@ An interactive story atlas for people discovering Odysseus's story for the first
 
 ## Explore the redesign
 
-- **The story:** short narrative beats with clear causes, consequences and chapter transitions.
+- **The story:** larger, readable text; short narrative beats; circular character portraits; and 18 distinct chapter scenes blended into the three parts' landscapes. Each part's opening chapter keeps its original background.
 - **The Cyclops:** inspect the stone door, wine and sheep to understand the escape. Exploration is optional.
 - **World atlas:** orbit, zoom and pan the 3D map, or use the 2D view. Mythic placements and real geographical references are kept distinct.
 - **Characters:** 21 profiles with motivations, chapter links and a readable tree of direct relationships.
@@ -19,6 +19,8 @@ An interactive story atlas for people discovering Odysseus's story for the first
 - **Ancient sources:** visible book references, qualified mythology and an optional route explaining Homer's epic order.
 
 ![The Cyclops chapter with its interactive cave objects](docs/screenshots/cyclops-desktop.png)
+
+![Odysseus passes the Sirens, with artwork blended into the maritime part](docs/screenshots/sirens-desktop.png)
 
 ![The redesigned atlas](docs/screenshots/atlas-desktop.png)
 

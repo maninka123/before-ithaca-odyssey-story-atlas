@@ -26,6 +26,7 @@ export const parts = [
   "The long journey home",
   "Return to Ithaca",
 ];
+export const partImages = ["temple", "voyage", "temple"];
 const odyssey = (book: number) =>
   `https://www.theoi.com/Text/HomerOdyssey${book}.html`;
 const raw = [
@@ -65,7 +66,7 @@ const raw = [
     characters: ["Helen", "Paris", "Menelaus", "Agamemnon"],
     source: "Mythic background · Apollodorus, Epitome 3.3–4; Iliad 3",
     sourceUrl: "https://www.theoi.com/Text/ApollodorusE.html",
-    image: "temple",
+    image: "chapters/helen",
     beats: [
       [
         "Two households divided",
@@ -91,7 +92,7 @@ const raw = [
     characters: ["Odysseus", "Penelope", "Telemachus", "Agamemnon", "Achilles"],
     source: "Mythic background · Apollodorus, Epitome 3.6–22",
     sourceUrl: "https://www.theoi.com/Text/ApollodorusE.html",
-    image: "voyage",
+    image: "chapters/armies",
     beats: [
       [
         "A fleet with many kings",
@@ -118,7 +119,7 @@ const raw = [
     characters: ["Achilles", "Hector", "Agamemnon", "Odysseus"],
     source: "Homer, Iliad · Books 1, 16, 22–24",
     sourceUrl: "https://www.theoi.com/Text/HomerIliad1.html",
-    image: "troy",
+    image: "chapters/war",
     beats: [
       [
         "A divided army",
@@ -239,7 +240,7 @@ const raw = [
     characters: ["Odysseus", "Aeolus"],
     source: "Homer, Odyssey · Book 10.1–79",
     sourceUrl: odyssey(10),
-    image: "voyage",
+    image: "chapters/aeolus",
     beats: [
       [
         "A sealed gift",
@@ -265,7 +266,7 @@ const raw = [
     characters: ["Odysseus"],
     source: "Homer, Odyssey · Book 10.80–132",
     sourceUrl: odyssey(10),
-    image: "voyage",
+    image: "chapters/giants",
     beats: [
       [
         "A narrow entrance",
@@ -291,7 +292,7 @@ const raw = [
     characters: ["Odysseus", "Circe", "Hermes"],
     source: "Homer, Odyssey · Book 10.133–574",
     sourceUrl: odyssey(10),
-    image: "temple",
+    image: "chapters/circe",
     beats: [
       [
         "Men turned into animals",
@@ -343,7 +344,7 @@ const raw = [
     characters: ["Odysseus", "Circe"],
     source: "Homer, Odyssey · Book 12.39–54, 158–200",
     sourceUrl: odyssey(12),
-    image: "voyage",
+    image: "chapters/sirens",
     beats: [
       [
         "A promise of knowledge",
@@ -369,7 +370,7 @@ const raw = [
     characters: ["Odysseus", "Circe"],
     source: "Homer, Odyssey · Book 12.73–126, 201–259",
     sourceUrl: odyssey(12),
-    image: "voyage",
+    image: "chapters/strait",
     beats: [
       [
         "Two threats",
@@ -395,7 +396,7 @@ const raw = [
     characters: ["Odysseus", "Zeus"],
     source: "Homer, Odyssey · Book 12.260–450",
     sourceUrl: odyssey(12),
-    image: "voyage",
+    image: "chapters/helios",
     beats: [
       [
         "Stranded and hungry",
@@ -421,7 +422,7 @@ const raw = [
     characters: ["Odysseus", "Calypso", "Athena", "Hermes", "Zeus", "Poseidon"],
     source: "Homer, Odyssey · Books 1 and 5",
     sourceUrl: odyssey(5),
-    image: "temple",
+    image: "chapters/calypso",
     beats: [
       [
         "Seven years of waiting",
@@ -447,7 +448,7 @@ const raw = [
     characters: ["Odysseus", "Nausicaa", "Alcinous", "Athena"],
     source: "Homer, Odyssey · Books 6–9 and 13",
     sourceUrl: odyssey(6),
-    image: "temple",
+    image: "chapters/phaeacians",
     beats: [
       [
         "Nausicaa offers help",
@@ -499,7 +500,7 @@ const raw = [
     characters: ["Odysseus", "Athena", "Telemachus", "Penelope", "Eumaeus"],
     source: "Homer, Odyssey · Books 13–20",
     sourceUrl: odyssey(13),
-    image: "temple",
+    image: "chapters/disguise",
     beats: [
       [
         "A disguise and a refuge",
@@ -525,7 +526,7 @@ const raw = [
     characters: ["Odysseus", "Penelope", "Telemachus"],
     source: "Homer, Odyssey · Book 21",
     sourceUrl: odyssey(21),
-    image: "temple",
+    image: "chapters/bow",
     beats: [
       [
         "The contest",
@@ -551,7 +552,7 @@ const raw = [
     characters: ["Odysseus", "Telemachus", "Athena", "Eumaeus"],
     source: "Homer, Odyssey · Book 22",
     sourceUrl: odyssey(22),
-    image: "temple",
+    image: "chapters/suitors",
     beats: [
       [
         "Odysseus names himself",
@@ -578,7 +579,7 @@ const raw = [
     characters: ["Odysseus", "Penelope", "Telemachus", "Athena", "Zeus"],
     source: "Homer, Odyssey · Books 23–24",
     sourceUrl: odyssey(23),
-    image: "temple",
+    image: "chapters/reunion",
     beats: [
       [
         "Penelope’s final test",

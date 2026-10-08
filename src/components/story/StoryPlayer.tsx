@@ -13,9 +13,11 @@ import {
   MapPin,
   Waves,
 } from "lucide-react";
-import { chapters, epicOrder, imagePath, parts } from "../../data/chapters";
+import { chapters, epicOrder, parts } from "../../data/chapters";
 import { useJourney } from "../../store/journey";
 import { useAudio } from "../../hooks/useAudio";
+import Avatar from "../characters/Avatar";
+import ChapterBackdrop from "./ChapterBackdrop";
 import CyclopsScene from "./CyclopsScene";
 export default function StoryPlayer({
   openChapters,
@@ -95,13 +97,7 @@ export default function StoryPlayer({
     >
       {!reading ? (
         <>
-          <div
-            className="story-backdrop"
-            key={c.image}
-            style={{ backgroundImage: `url(${imagePath(c.image)})` }}
-            role="img"
-            aria-label={`Artistic illustration for ${c.title}`}
-          />
+          <ChapterBackdrop key={c.part} chapter={c} />
           <div className="story-shade" />
         </>
       ) : null}
@@ -177,8 +173,13 @@ export default function StoryPlayer({
         <div className="story-characters">
           <span>IN THIS CHAPTER</span>
           {c.characters.map((name) => (
-            <button key={name} onClick={() => selectCharacter(name)}>
-              {name}
+            <button
+              key={name}
+              aria-label={name}
+              onClick={() => selectCharacter(name)}
+            >
+              <Avatar name={name} decorative />
+              <span>{name}</span>
             </button>
           ))}
         </div>

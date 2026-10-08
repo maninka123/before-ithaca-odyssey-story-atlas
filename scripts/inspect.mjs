@@ -36,12 +36,14 @@ await page
   .getByRole("textbox", { name: "Search story chapters" })
   .fill("cyclops");
 await page.locator(".chapter-library button").click();
+await page.locator(".chapter-blend.ready").waitFor();
 await page.screenshot({ path: "docs/screenshots/cyclops-desktop.png" });
 await page.getByRole("button", { name: "Characters", exact: true }).click();
 await page.locator(".profile-opening").waitFor();
 await page.screenshot({ path: "docs/screenshots/characters-desktop.png" });
 await page.setViewportSize({ width: 390, height: 844 });
 await page.goto("http://127.0.0.1:5173/#/story/cyclops");
+await page.locator(".chapter-blend.ready").waitFor();
 await page.screenshot({
   path: "docs/screenshots/cyclops-mobile.png",
   fullPage: true,
@@ -58,6 +60,19 @@ await page.locator("img").evaluateAll(async (images) => {
 });
 await page.screenshot({
   path: "docs/screenshots/landing-mobile.png",
+  fullPage: true,
+});
+await page.setViewportSize({ width: 1440, height: 1000 });
+await page.goto("http://127.0.0.1:5173/#/story/sirens");
+await page.locator(".chapter-blend.ready").waitFor();
+await page.screenshot({
+  path: "docs/screenshots/sirens-desktop.png",
+  fullPage: true,
+});
+await page.goto("http://127.0.0.1:5173/#/story/reunion");
+await page.locator(".chapter-blend.ready").waitFor();
+await page.screenshot({
+  path: "docs/screenshots/reunion-desktop.png",
   fullPage: true,
 });
 console.log(JSON.stringify({ errors }, null, 2));

@@ -130,7 +130,7 @@ export default function Landing() {
             },
             {
               index: 20,
-              image: "temple",
+              image: chapters[20].image,
               tag: "RECOGNITION & RETURN",
               description: "What does it mean to come home?",
             },
